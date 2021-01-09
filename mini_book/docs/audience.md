@@ -1,0 +1,32 @@
+---
+jupytext:
+  text_representation:
+    extension: .md
+    format_name: myst
+kernelspec:
+  display_name: Python 3
+  language: python
+  name: python3
+---
+
+(audience)=
+
+
+# Before we start
+
+## Audience
+
+This tutorial is for you if: 
+
+* You have a basic idea about quantum computing from reading stuff online
+* You have an introductory understanding of the following things:
+    * Binary digits 
+    * Vectors 
+    * Matrices
+    * Complex Numbers
+* You are curious and want to dig deeper into quantum computing
+
+## A math-first tutorial
+
+When I started learning quantum computing, the best way for me to learn was to first understand the math by writing it down and improving my understanding by coding it. This will be the style in which the tutorial can be followed. I encourage you to grab a pen and paper to attempt the exercises in each module.
+Every section will have a math component followed optionally by a code component.  

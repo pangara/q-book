@@ -1,0 +1,10 @@
+# - file: README
+- file: docs/index
+  sections:
+    - file: docs/audience
+    - file: docs/qubits
+    - file: docs/gates
+    - file: docs/multi-qubit
+    - file: docs/entanglement
+    - file: docs/measurement
+    - file: docs/teleportation
