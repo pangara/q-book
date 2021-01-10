@@ -1,0 +1,529 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basics &#8212; From Qubits to Quantum Teleportation</title>
+    
+  <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+  <link rel="stylesheet"
+    href="../_static/vendor/open-sans_all/1.44.1/index.css">
+  <link rel="stylesheet"
+    href="../_static/vendor/lato_latin-ext/1.44.1/index.css">
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.40e2e510f6b7d1648584402491bb10fe.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.3da636dd464baa7582d2.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d31b09fe5c1d09cb49b26a786de4a05d.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Single Qubit Gates" href="gates.html" />
+    <link rel="prev" title="Before we start" href="audience.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../index.html">
+  
+  <img src="../_static/qe-logo-large.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">From Qubits to Quantum Teleportation</h1>
+  
+</a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <ul class="current nav sidenav_l1">
+ <li class="toctree-l1">
+  <a class="reference internal" href="audience.html">
+   Before we start
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Basics
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="gates.html">
+   Single Qubit Gates
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="multi-qubit.html">
+   Multiple Qubit Systems and Gates
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="entanglement.html">
+   Entanglement
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="measurement.html">
+   Measurement
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="teleportation.html">
+   Teleportation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="teleportation.html#bibliography">
+   Bibliography
+  </a>
+ </li>
+</ul>
+
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/docs/qubits.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/docs/qubits.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+                title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/quantecon-mini-example/master?urlpath=tree/mini_book/docs/qubits.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+
+    <!-- Table of contents -->
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+        
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   Qubits
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dirac-notation">
+   Dirac Notation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#refresher">
+   Refresher
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#complex-conjugates">
+     Complex conjugates
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#transpose">
+     Transpose
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dot-product">
+     Dot product
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#converting-between-bras-and-kets">
+   Converting between Bras and Kets
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-1">
+     Exercise 1
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-2">
+     Exercise 2
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#qubits-in-the-dirac-notation">
+   Qubits in the Dirac notation
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-quantum-state">
+   A quantum state
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#exercise-3">
+     Exercise 3
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#superposition">
+   Superposition
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="basics">
+<span id="qubits"></span><h1>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h1>
+<p>In this section, we will go over what qubits are, how qubits are represented, and the dirac notation</p>
+<div class="section" id="id1">
+<h2>Qubits<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>A qubit or a quantum bit is a unit of quantum information. Unlike a classical bit which can be 0 or 1, quantum mechanics allows qubits to be in a superposition of both states 0 and 1. We will learn more about superposition soon, but it can be thought of as a combination of 0 and 1.
+A bloch sphere shows us one representation of a qubit and is shown in the figure below.</p>
+<div class="figure align-default" id="bloch">
+<a class="reference internal image-reference" href="../_images/bloch.png"><img alt="../_images/bloch.png" src="../_images/bloch.png" style="width: 223.0px; height: 237.5px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Bloch Sphere</span><a class="headerlink" href="#bloch" title="Permalink to this image">¶</a></p>
+</div>
+<p>You can see that the 0 and 1 are wrapped in a pipe/angle bracket notation - this is the dirac notation.</p>
+</div>
+<div class="section" id="dirac-notation">
+<h2>Dirac Notation<a class="headerlink" href="#dirac-notation" title="Permalink to this headline">¶</a></h2>
+<p>The Dirac Notation, also called the Braket notation is a simple way of representing vectors.</p>
+<p>A column vector is called a ket and is represented in the following way:
+<span class="math notranslate nohighlight">\(|a\rangle = \begin{bmatrix}
+           a_{1} \\
+           a_{2} \\
+           \vdots \\
+           a_{n}
+         \end{bmatrix}\)</span></p>
+<p>A row vector is called a bra and is represented in the following way:
+<span class="math notranslate nohighlight">\(\langle a| = \begin{bmatrix}
+           a_{1}* &amp;
+           a_{2}* &amp; 
+           \dots &amp;
+           a_{n}*
+         \end{bmatrix}\)</span></p>
+<p>A ket can be converted into a bra by performing a complex conjugate on each of the elements and then performing a transpose.</p>
+</div>
+<div class="section" id="refresher">
+<h2>Refresher<a class="headerlink" href="#refresher" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="complex-conjugates">
+<h3>Complex conjugates<a class="headerlink" href="#complex-conjugates" title="Permalink to this headline">¶</a></h3>
+<p>Given a complex number <span class="math notranslate nohighlight">\(x = 3 + 2i\)</span>,</p>
+<p>Its complex conjugate will be <span class="math notranslate nohighlight">\(x{*} = 3 - 2i\)</span>
+Perform a complex conjugate again,
+<span class="math notranslate nohighlight">\(x^{**} = 3 + 2i\)</span></p>
+</div>
+<div class="section" id="transpose">
+<h3>Transpose<a class="headerlink" href="#transpose" title="Permalink to this headline">¶</a></h3>
+<p>Given a row vector <span class="math notranslate nohighlight">\( c = \begin{bmatrix}
+           3 &amp;
+           2 
+         \end{bmatrix}\)</span></p>
+<p>Here is its transpose: <span class="math notranslate nohighlight">\( c = \begin{bmatrix}
+           3 \\
+           2 
+         \end{bmatrix}\)</span></p>
+</div>
+<div class="section" id="dot-product">
+<h3>Dot product<a class="headerlink" href="#dot-product" title="Permalink to this headline">¶</a></h3>
+<p>A description of dot products will go here if required.</p>
+</div>
+</div>
+<div class="section" id="converting-between-bras-and-kets">
+<h2>Converting between Bras and Kets<a class="headerlink" href="#converting-between-bras-and-kets" title="Permalink to this headline">¶</a></h2>
+<p>Now that we understand how complex conjugates and transposes work, lets do some exercises converting between bras and kets.</p>
+<div class="section" id="exercise-1">
+<h3>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h3>
+<p>Convert the following bras into kets.</p>
+<div class="math notranslate nohighlight">
+\[ 
+\langle x| = \begin{bmatrix}
+           3 &amp;
+           2 &amp; 
+           1
+         \end{bmatrix} 
+\]</div>
+<div class="math notranslate nohighlight">
+\[ 
+\langle y| = \begin{bmatrix}
+           3 + 2i &amp;
+           2 - i &amp; 
+           1
+         \end{bmatrix} 
+\]</div>
+</div>
+<div class="section" id="exercise-2">
+<h3>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h3>
+<p>Convert the following kets into bras.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} 
+|u\rangle = \begin{bmatrix}
+           1 \\
+           0 
+         \end{bmatrix} 
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split} 
+|u\rangle = \frac{1}{\sqrt 2}\begin{bmatrix}
+           1 \\
+           i 
+         \end{bmatrix} 
+         
+\end{split}\]</div>
+</div>
+</div>
+<div class="section" id="qubits-in-the-dirac-notation">
+<h2>Qubits in the Dirac notation<a class="headerlink" href="#qubits-in-the-dirac-notation" title="Permalink to this headline">¶</a></h2>
+<p>Let’s take a look at the Bloch spehere again.</p>
+<p>The north and south poles are given by <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>. We now know what the symbols mean - <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span> are vectors!
+It’s important to remember here that 0 is very much different from <span class="math notranslate nohighlight">\(|0\rangle\)</span> and 1 is very much different from <span class="math notranslate nohighlight">\(|1\rangle\)</span>.
+<span class="math notranslate nohighlight">\(|0\rangle\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}|0\rangle = \begin{bmatrix}
+           1 \\
+           0
+         \end{bmatrix} 
+\end{split}\]</div>
+<p>and <span class="math notranslate nohighlight">\(|1\rangle\)</span> is given by</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}|u1\rangle = \begin{bmatrix}
+           0 \\
+           1
+         \end{bmatrix} 
+\end{split}\]</div>
+</div>
+<div class="section" id="a-quantum-state">
+<h2>A quantum state<a class="headerlink" href="#a-quantum-state" title="Permalink to this headline">¶</a></h2>
+<p>The bloch sphere does not only represent the states <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>, but can also represent a variety of states on the sphere. Think of the bloch sphere as a balloon. Every point on the balloon is a valid quantum state and is a combination of <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>. We can write down an arbitrary state <span class="math notranslate nohighlight">\(|\psi\rangle\)</span> as follows:</p>
+<div class="math notranslate nohighlight">
+\[|\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle\]</div>
+<p>where</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{|\alpha|^2 + |\beta|^2 } = 1 \]</div>
+<p>In vector notation we can write this as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}|\psi\rangle~= \alpha~\begin{bmatrix}
+           1 \\
+           0
+         \end{bmatrix} +~\beta~\begin{bmatrix}
+           0 \\
+           1
+         \end{bmatrix} 
+\end{split}\]</div>
+<p>In short,</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}|\psi\rangle~= \begin{bmatrix}
+           \alpha \\
+           \beta
+         \end{bmatrix} 
+\end{split}\]</div>
+<p>Given the following state:</p>
+<div class="math notranslate nohighlight">
+\[|\psi&gt;~= \frac{1}{\sqrt 2}|0\rangle+~\frac{1}{\sqrt 2}|1\rangle\]</div>
+<p>We calculate <span class="math notranslate nohighlight">\( \sqrt{|\alpha|^2 + |\beta|^2} \)</span> to check whether it sums up to 1.</p>
+<div class="math notranslate nohighlight">
+\[\sqrt{(\frac{1}{\sqrt 2})^2 + (\frac{1}{\sqrt 2})^2} = \sqrt{\frac{1}{2} + \frac{1}{2}} = 1\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You must also wonder about the angles on the bloch sphere <span class="math notranslate nohighlight">\( \phi \)</span> and <span class="math notranslate nohighlight">\( \theta \)</span>. You can use these angles to represent the state <span class="math notranslate nohighlight">\( |\psi\rangle \)</span> as <span class="math notranslate nohighlight">\( |\psi\rangle = cos \frac{\theta}{2}|0\rangle +  e^{i\phi}sin \frac{\theta}{2}|1\rangle \)</span>. This is important, but we will not discuss this in the scope of this tutorial</p>
+</div>
+<div class="section" id="exercise-3">
+<h3>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h3>
+<p>Verify whether the following are valid quantum states or not.</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\( |\psi&gt;~= \frac{1}{4}|0&gt;+~\frac{3}{4}|1&gt; \)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|\psi&gt;~= \frac{12}{13}|0&gt;+~\frac{5}{13}|1&gt;\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|\psi&gt;~= \frac{4}{5}|0&gt;+~\frac{2}{5}|1&gt; \)</span></p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="superposition">
+<h2>Superposition<a class="headerlink" href="#superposition" title="Permalink to this headline">¶</a></h2>
+<p>Superposition is defined as a combination of the states of <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>, therefore <span class="math notranslate nohighlight">\(|\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle\)</span> is a superposition state.
+The state we look at before <span class="math notranslate nohighlight">\( |\psi&gt;~= \frac{1}{\sqrt 2}|0&gt;+~\frac{1}{\sqrt 2}|1&gt;  \)</span> is also a superpostion state. Moreover, since the value of <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are the same, we can say that the state is in an equal superposition of <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>. In classical computing we are always manipulating zeros and ones to get what we want. You must wonder how we get from one state to another quantumly because at the end of the day, we want to perform a computation quantumly! This is where gates come in, and are the topic of discussion in the next section.</p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./docs"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+    <a class='left-prev' id="prev-link" href="audience.html" title="previous page">Before we start</a>
+    <a class='right-next' id="next-link" href="gates.html" title="next page">Single Qubit Gates</a>
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Prashanti Priya Angara<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    
+  <script src="../_static/js/index.3da636dd464baa7582d2.js"></script>
+
+
+    
+  </body>
+</html>
