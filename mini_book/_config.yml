@@ -33,6 +33,6 @@ binder:
   text                        : "Launch binder"
 
 latex:
-  latex_engine                : "xelatex"
+  latex_engine                : "pdflatex"
   latex_documents:
     targetname: book.tex
