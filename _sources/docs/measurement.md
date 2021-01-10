@@ -39,9 +39,8 @@ Quantum states are very similar. The possiblity of measuring a qubit to be in th
 Given a state $ |\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle $, the probability of finding the qubit in state  $|0\rangle$ is $|\alpha|^2$ and the probability of finding the qubit in state  $|1\rangle$ is $|\beta|^2$.
 
 ### Exercise
-1. Given a state $ |\psi\rangle~= \frac{1}{\sqrt 2}~|0\rangle+~\frac{1}{\sqrt 2}~|1\rangle $, 
-What is the probability of finding the qubit in state $|0\rangle$ ? 
+1. Given a state $ |\psi\rangle~= \frac{1}{\sqrt 2}~|0\rangle+~\frac{1}{\sqrt 2}~|1\rangle $, what is the probability of finding the qubit in state $|0\rangle$ ? 
 
-2. Given a state $ |\psi\rangle~= \frac{12}{13}~|0\rangle+~\frac{5}{13}~|1\rangle $, What is the probability of finding the qubit in state $|1\rangle$ ? 
+2. Given a state $ |\psi\rangle~= \frac{12}{13}~|0\rangle+~\frac{5}{13}~|1\rangle $, what is the probability of finding the qubit in state $|1\rangle$ ? 
 
-3. Given a state $|\psi\rangle~= |1\rangle$, what is the probability of finding the qubit in state $|0\rangle$ ? 
+3. Given a state $|\psi\rangle~= |1\rangle$, what is the probability of finding the qubit in state $|0\rangle~$ ? 
