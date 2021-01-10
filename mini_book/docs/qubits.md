@@ -212,4 +212,21 @@ Verify whether the following are valid quantum states or not.
 ## Superposition
 
 Superposition is defined as a combination of the states of $|0\rangle$ and $|1\rangle$, therefore $|\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle$ is a superposition state. 
-The state we look at before $ |\psi>~= \frac{1}{\sqrt 2}|0>+~\frac{1}{\sqrt 2}|1>  $ is also a superpostion state. Moreover, since the value of $\alpha$ and $\beta$ are the same, we can say that the state is in an equal superposition of $|0\rangle$ and $|1\rangle$. In classical computing we are always manipulating zeros and ones to get what we want. You must wonder how we get from one state to another quantumly because at the end of the day, we want to perform a computation quantumly! This is where gates come in, and are the topic of discussion in the next section.
+The state we look at before $ |\psi>~= \frac{1}{\sqrt 2}|0>+~\frac{1}{\sqrt 2}|1>  $ is also a superposition state. Moreover, since the value of $\alpha$ and $\beta$ are the same, we can say that the state is in an equal superposition of $|0\rangle$ and $|1\rangle$. In classical computing we are always manipulating zeros and ones to get what we want. You must wonder how we get from one state to another quantumly because at the end of the day, we want to perform a computation quantumly! This is where gates come in, and are the topic of discussion in the next section.
+
+## Code Example
+```{code-cell} ipython3
+import pennylane as qml
+from pennylane import numpy as np
+
+```
+
+Create a device. The number of wires represents the number of qubits in the system.
+
+
+```{code-cell} ipython3
+
+dev1 = qml.device("default.qubit", wires=1)
+
+```
+
