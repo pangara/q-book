@@ -289,6 +289,11 @@
    Superposition
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#code-example">
+   Code Example
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -468,7 +473,26 @@ It’s important to remember here that 0 is very much different from <span class
 <div class="section" id="superposition">
 <h2>Superposition<a class="headerlink" href="#superposition" title="Permalink to this headline">¶</a></h2>
 <p>Superposition is defined as a combination of the states of <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>, therefore <span class="math notranslate nohighlight">\(|\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle\)</span> is a superposition state.
-The state we look at before <span class="math notranslate nohighlight">\( |\psi&gt;~= \frac{1}{\sqrt 2}|0&gt;+~\frac{1}{\sqrt 2}|1&gt;  \)</span> is also a superpostion state. Moreover, since the value of <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are the same, we can say that the state is in an equal superposition of <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>. In classical computing we are always manipulating zeros and ones to get what we want. You must wonder how we get from one state to another quantumly because at the end of the day, we want to perform a computation quantumly! This is where gates come in, and are the topic of discussion in the next section.</p>
+The state we look at before <span class="math notranslate nohighlight">\( |\psi&gt;~= \frac{1}{\sqrt 2}|0&gt;+~\frac{1}{\sqrt 2}|1&gt;  \)</span> is also a superposition state. Moreover, since the value of <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are the same, we can say that the state is in an equal superposition of <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>. In classical computing we are always manipulating zeros and ones to get what we want. You must wonder how we get from one state to another quantumly because at the end of the day, we want to perform a computation quantumly! This is where gates come in, and are the topic of discussion in the next section.</p>
+</div>
+<div class="section" id="code-example">
+<h2>Code Example<a class="headerlink" href="#code-example" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pennylane</span> <span class="k">as</span> <span class="nn">qml</span>
+<span class="kn">from</span> <span class="nn">pennylane</span> <span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Create a device. The number of wires represents the number of qubits in the system.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dev1</span> <span class="o">=</span> <span class="n">qml</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;default.qubit&quot;</span><span class="p">,</span> <span class="n">wires</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 </div>
 

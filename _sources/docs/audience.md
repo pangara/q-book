@@ -30,3 +30,13 @@ This tutorial is for you if:
 
 When I started learning quantum computing, the best way for me to learn was to first understand the math by writing it down and improving my understanding by coding it. This will be the style in which the tutorial can be followed. I encourage you to grab a pen and paper to attempt the exercises in each module.
 Every section will have a math component followed optionally by a code component.  
+
+## Learning Outcomes
+By the end of this tutorial, you will
+
+* learn about single qubit systems and multi qubit systems, their mathematical representation 
+* learn about the mathematical explanations of superposition and entanglement
+* be able to manipulate quantum states using gates
+* learn to write short quantum programs using Pennylane
+* understand quantum teleportation mathematically
+* learn how to build the quantum teleportation circuit
