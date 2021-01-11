@@ -7,15 +7,28 @@ kernelspec:
   display_name: Python 3
   language: python
   name: python3
+
+launch_buttons:
+  thebe: true
+
 ---
 
 (qubits)=
 
 # Basics
-In this section, we will go over what qubits are, how qubits are represented, and the dirac notation
+
+In this section, we will go over what qubits are, how qubits are represented, and the dirac notation.
 ## Qubits
 
-A qubit or a quantum bit is a unit of quantum information. Unlike a classical bit which can be 0 or 1, quantum mechanics allows qubits to be in a superposition of both states 0 and 1. We will learn more about superposition soon, but it can be thought of as a combination of 0 and 1. 
+
+```{figure} /_static/qubit-highlight.png
+:scale: 40%
+:name: qubit-highlight 
+
+Part of the quantum teleportation diagram with the qubits highlighted.
+```
+
+In this section, we discuss what the symbols $|q_0\rangle$, or $|0\rangle$ mean. These are called qubits. A qubit or a quantum bit is a unit of quantum information. Unlike a classical bit which can be 0 or 1, quantum mechanics allows qubits to be in a superposition of both states 0 and 1. We will learn more about superposition soon, but it can be thought of as a combination of 0 and 1. 
 A bloch sphere shows us one representation of a qubit and is shown in the figure below.
 
 ```{figure} /_static/bloch.png

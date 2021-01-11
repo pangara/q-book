@@ -12,8 +12,13 @@ kernelspec:
 (gates)=
 
 # Single Qubit Gates
+```{figure} /_static/gates-highlight.png
+:scale: 40%
+:name: gates-highlight 
 
-You use gates to get from one state to another in the quantum universe. You can think of gates as small microwave pulses that transform the qubit and allow it to go from one state (say $ |0\rangle $) to another state (say (say $ |1\rangle $). 
+Part of the quantum teleportation diagram with the qubits and gates highlighted.
+```
+The boxes in yellow represent gates. We use gates to get from one state to another in the quantum universe. You can think of gates as small microwave pulses that transform the qubit and allow it to go from one state (say $ |0\rangle $) to another state (say (say $ |1\rangle $). 
 
 
 ```{figure} /_static/gate.jpg
@@ -23,6 +28,11 @@ You use gates to get from one state to another in the quantum universe. You can 
 A quantum gate
 
 ```
+
+
+
+
+
 
 
 We will go over a few important single qubit gates for quantum teleportation. These are the Pauli X gate and the the Hadamard Gate. 
@@ -38,6 +48,16 @@ $$
 ```{note}
 You will see that may quantum textbooks use the dagger symbol for a conjugate transpose. This is a phycist/mathematician terminology ambiguity and is essentially interchangeable. 
 ```
+## Identity Gate
+
+```{figure} /_static/wire.png
+:scale: 30%
+:name: wire
+
+The Identity gate
+```
+
+The simplest gate is the identity gate, which doesn't change the qubit. It is represented by the Identity matrix. While this might seem trivial, qubits are very fragile and its not quite easy to keep the qubit in its given state. 
 
 ## Pauli-X Gate
 ```{figure} /_static/x-gate.PNG
@@ -80,6 +100,13 @@ $$
 You are given a state $ |\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle $. What happens to the state when the Pauli-X gate is applied to it? 
 
 ## Hadamard Gate
+
+```{figure} /_static/hadamard.png
+:scale: 30%
+:name: x-gate 
+
+The X gate
+```
 
 The Hadamard gate is a famous one, it takes a state (say |0\rangle) into a superposition state. This is also a single qubit gate and is given by:
 

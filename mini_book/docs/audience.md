@@ -14,22 +14,19 @@ kernelspec:
 
 # Before we start
 
+<img style="float: right; max-width:300px; max-height:300px;" src="../_static/kids.jpg">
+
 ## Audience
 
 This tutorial is for you if: 
 
-* You have a basic idea about quantum computing from reading stuff online
+* You have a basic idea about quantum computing from general online reading
 * You have an introductory understanding of the following things:
     * Binary digits 
     * Vectors 
     * Matrices
     * Complex Numbers
 * You are curious and want to dig deeper into quantum computing
-
-## A math-first tutorial
-
-When I started learning quantum computing, the best way for me to learn was to first understand the math by writing it down and improving my understanding by coding it. This will be the style in which the tutorial can be followed. I encourage you to grab a pen and paper to attempt the exercises in each module.
-Every section will have a math component followed optionally by a code component.  
 
 ## Learning Outcomes
 By the end of this tutorial, you will
@@ -40,3 +37,8 @@ By the end of this tutorial, you will
 * learn to write short quantum programs using Pennylane
 * understand quantum teleportation mathematically
 * learn how to build the quantum teleportation circuit
+
+## A math-first tutorial
+
+When I started learning quantum computing, the best way for me to learn was to first understand the math by writing it down and improving my understanding by coding it. This will be the style in which the tutorial can be followed. I encourage you to grab a pen and paper to attempt the exercises in each module.
+Every section will have a math component followed optionally by a code component.  
