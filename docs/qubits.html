@@ -290,11 +290,6 @@
    Superposition
   </a>
  </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#code-example">
-   Code Example
-  </a>
- </li>
 </ul>
 
         </nav>
@@ -308,7 +303,7 @@
                 
   <div class="section" id="basics">
 <span id="qubits"></span><h1>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">¶</a></h1>
-<p>In this section, we will go over what qubits are, how qubits are represented, and the dirac notation.</p>
+<p>In this section, we will go over what qubits are, how qubits are represented, and the Dirac notation.</p>
 <div class="section" id="id1">
 <h2>Qubits<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="qubit-highlight">
@@ -316,16 +311,16 @@
 <p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Part of the quantum teleportation diagram with the qubits highlighted.</span><a class="headerlink" href="#qubit-highlight" title="Permalink to this image">¶</a></p>
 </div>
 <p>In this section, we discuss what the symbols <span class="math notranslate nohighlight">\(|q_0\rangle\)</span>, or <span class="math notranslate nohighlight">\(|0\rangle\)</span> mean. These are called qubits. A qubit or a quantum bit is a unit of quantum information. Unlike a classical bit which can be 0 or 1, quantum mechanics allows qubits to be in a superposition of both states 0 and 1. We will learn more about superposition soon, but it can be thought of as a combination of 0 and 1.
-A bloch sphere shows us one representation of a qubit and is shown in the figure below.</p>
+A Bloch sphere shows us one representation of a qubit and is shown in the figure below.</p>
 <div class="figure align-default" id="bloch">
 <a class="reference internal image-reference" href="../_images/bloch.png"><img alt="../_images/bloch.png" src="../_images/bloch.png" style="width: 223.0px; height: 237.5px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Bloch Sphere</span><a class="headerlink" href="#bloch" title="Permalink to this image">¶</a></p>
 </div>
-<p>You can see that the 0 and 1 are wrapped in a pipe/angle bracket notation - this is the dirac notation.</p>
+<p>You can see that the 0 and 1 are wrapped in a pipe/angle bracket notation - this is the Dirac notation.</p>
 </div>
 <div class="section" id="dirac-notation">
 <h2>Dirac Notation<a class="headerlink" href="#dirac-notation" title="Permalink to this headline">¶</a></h2>
-<p>The Dirac Notation, also called the Braket notation is a simple way of representing vectors.</p>
+<p>The Dirac Notation also called the Braket notation is a simple way of representing vectors.</p>
 <p>A column vector is called a ket and is represented in the following way:
 <span class="math notranslate nohighlight">\(|a\rangle = \begin{bmatrix}
            a_{1} \\
@@ -369,7 +364,7 @@ Perform a complex conjugate again,
 </div>
 <div class="section" id="converting-between-bras-and-kets">
 <h2>Converting between Bras and Kets<a class="headerlink" href="#converting-between-bras-and-kets" title="Permalink to this headline">¶</a></h2>
-<p>Now that we understand how complex conjugates and transposes work, lets do some exercises converting between bras and kets.</p>
+<p>Now that we understand how complex conjugates and transposes work, let’s do some exercises converting between bras and kets.</p>
 <div class="tip admonition">
 <p class="admonition-title">Exercise 1</p>
 <p>Convert the following bras into kets.</p>
@@ -412,7 +407,7 @@ Perform a complex conjugate again,
 </div>
 <div class="section" id="qubits-in-the-dirac-notation">
 <h2>Qubits in the Dirac notation<a class="headerlink" href="#qubits-in-the-dirac-notation" title="Permalink to this headline">¶</a></h2>
-<p>Let’s take a look at the Bloch spehere again.</p>
+<p>Let’s take a look at the Bloch sphere again.</p>
 <p>The north and south poles are given by <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>. We now know what the symbols mean - <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span> are vectors!
 It’s important to remember here that 0 is very much different from <span class="math notranslate nohighlight">\(|0\rangle\)</span> and 1 is very much different from <span class="math notranslate nohighlight">\(|1\rangle\)</span>.
 <span class="math notranslate nohighlight">\(|0\rangle\)</span> is given by</p>
@@ -432,13 +427,13 @@ It’s important to remember here that 0 is very much different from <span class
 </div>
 <div class="section" id="a-quantum-state">
 <h2>A quantum state<a class="headerlink" href="#a-quantum-state" title="Permalink to this headline">¶</a></h2>
-<p>The bloch sphere does not only represent the states <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>, but can also represent a variety of states on the sphere. Think of the bloch sphere as a balloon. Every point on the balloon is a valid quantum state and is a combination of <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>. We can write down an arbitrary state <span class="math notranslate nohighlight">\(|\psi\rangle\)</span> as follows:</p>
+<p>The Bloch sphere does not only represent the states <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>, but can also represent a variety of states on the sphere. Think of the Bloch sphere as a balloon. Every point on the balloon is a valid quantum state and is a combination of <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>. We can write down an arbitrary state <span class="math notranslate nohighlight">\(|\psi\rangle\)</span> as follows:</p>
 <div class="math notranslate nohighlight">
 \[|\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle\]</div>
 <p>where</p>
 <div class="math notranslate nohighlight">
 \[\sqrt{|\alpha|^2 + |\beta|^2 } = 1 \]</div>
-<p>In vector notation we can write this as:</p>
+<p>In vector notation, we can write this as:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}|\psi\rangle~= \alpha~\begin{bmatrix}
            1 \\
@@ -478,27 +473,8 @@ It’s important to remember here that 0 is very much different from <span class
 <div class="section" id="superposition">
 <h2>Superposition<a class="headerlink" href="#superposition" title="Permalink to this headline">¶</a></h2>
 <p>Superposition is defined as a combination of the states of <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>, therefore <span class="math notranslate nohighlight">\(|\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle\)</span> is a superposition state.
-The state we look at before <span class="math notranslate nohighlight">\( |\psi&gt;~= \frac{1}{\sqrt 2}|0&gt;+~\frac{1}{\sqrt 2}|1&gt;  \)</span> is also a superposition state. Moreover, since the value of <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are the same, we can say that the state is in an equal superposition of <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>. In classical computing we are always manipulating zeros and ones to get what we want. You must wonder how we get from one state to another quantumly because at the end of the day, we want to perform a computation quantumly! This is where gates come in, and are the topic of discussion in the next section.
+The state we look at before <span class="math notranslate nohighlight">\( |\psi&gt;~= \frac{1}{\sqrt 2}|0&gt;+~\frac{1}{\sqrt 2}|1&gt;  \)</span> is also a superposition state. Moreover, since the value of <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are the same, we can say that the state is in an equal superposition of <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>. In classical computing, we are always manipulating zeros and ones to get what we want. You must wonder how we get from one state to another quantumly because, at the end of the day, we want to perform a computation quantumly! This is where gates come in and are the topic of discussion in the next section.
 <img alt="Superposition" src="https://www.nist.gov/sites/default/files/images/2019/12/04/superposition.gif" /></p>
-</div>
-<div class="section" id="code-example">
-<h2>Code Example<a class="headerlink" href="#code-example" title="Permalink to this headline">¶</a></h2>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pennylane</span> <span class="k">as</span> <span class="nn">qml</span>
-<span class="kn">from</span> <span class="nn">pennylane</span> <span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Create a device. The number of wires represents the number of qubits in the system.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dev1</span> <span class="o">=</span> <span class="n">qml</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;default.qubit&quot;</span><span class="p">,</span> <span class="n">wires</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 </div>
 

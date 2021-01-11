@@ -36,7 +36,7 @@ import matplotlib.pyplot as plt
 ```
 
 ## Create a device
-Create a device. `default.qubit` is a statevector simulator which allows us to simulate qubits. More about [qml.device here](https://pennylane.readthedocs.io/en/stable/code/api/pennylane.device.html). With the wires argument we can specify the number of qubits we are working with. 
+Create a device. `default.qubit` is a state vector simulator that allows us to simulate qubits. More about [qml.device here](https://pennylane.readthedocs.io/en/stable/code/api/pennylane.device.html). With the wires argument, we can specify the number of qubits we are working with. 
 
 ```{code-cell} ipython3
 
@@ -44,7 +44,7 @@ dev = qml.device("default.qubit", wires=1)
 
 ```
 ## Create a circuit
-Let's create our circuit. In PennyLane, quantum circuits are created as quantum functions. These quantum computations are represented as quantum node (QNode) objects. We create the QNodes with something called a qnode decorator. All you need to know about this for now is that you need to precede your function with `@qml.qnode(dev)`
+Let's create our circuit. In PennyLane, quantum circuits are created as quantum functions. These quantum computations are represented as quantum node (QNode) objects. We create the QNodes with something called a qnode decorator. All you need to know about this, for now, is that you need to precede your function with `@qml.qnode(dev)`
 
 
 

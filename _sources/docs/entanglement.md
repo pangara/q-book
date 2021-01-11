@@ -17,9 +17,9 @@ kernelspec:
 # Entanglement
 
 
-Following Einstein, Podolski and Rosen's paper, famously called the EPR paper reported something "spooky", which later came to be lnown as entanglement between two particles.
+Following Einstein, Podolski and Rosen's paper, famously called the EPR paper reported something "spooky", which later came to be known as entanglement between two particles.
 
-Entanglement is a physical phenomenon that occurs between particles or in our case qubits, such that the quantum state of one of the qubits cannot be desceibed independently of the other. In other words, the state cannot be tensor facotrized. Bell states, named after John Bell, are two qubit entangled states. Entanglement is one of the components that gives quantum computing its power over classical computers.
+Entanglement is a physical phenomenon that occurs between particles or in our case qubits, such that the quantum state of one of the qubits cannot be described independently of the other. In other words, the state cannot be tensor factorized. Bell states, named after John Bell, are two-qubit entangled states. Entanglement is one of the components that gives quantum computing its power over classical computers.
 
 ```{figure} /_static/Entaglement.jpg
 :scale: 40%

@@ -11,7 +11,7 @@ kernelspec:
 
 (pennylane2)=
 # PennyLane II: Entanglement
-In this section we will create a quantum circuit that entangles two qubits. 
+In this section, we will create a quantum circuit that entangles two qubits. 
 
 ## Setup
 Let's start with our usual setup by importing the necessary libraries
@@ -31,7 +31,7 @@ dev = qml.device("default.qubit", wires=2)
 ```
 ## Create the entanglement circuit
 
-The entanglement circuit involving applying the Hadamard gate to the first qubit followed by the CNOT gte with the second qubit as the target qubit.
+The entanglement circuit involving applying the Hadamard gate to the first qubit followed by the CNOT gate with the second qubit as the target qubit.
 
 ```{code-cell} ipython3
 

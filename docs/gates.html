@@ -285,14 +285,14 @@
 <a class="reference internal image-reference" href="../_images/gate.jpg"><img alt="../_images/gate.jpg" src="../_images/gate.jpg" style="width: 480.0px; height: 270.0px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">A quantum gate</span><a class="headerlink" href="#gate" title="Permalink to this image">¶</a></p>
 </div>
-<p>We will go over a few important single qubit gates for quantum teleportation. These are the Pauli X gate and the the Hadamard Gate.
-Unlike states which are vectors, gates are matrices, specifically these are unitary matrices. All this means is that a matrix multiplied by its conjugate transpose gives us the identity matrix.
-The reason why we choose unitary matrices are because they preserve the length of our state vector.</p>
+<p>We will go over a few important single-qubit gates for quantum teleportation. These are the Pauli-X gate and the Hadamard Gate.
+Unlike states which are vectors, gates are matrices, specifically, these are unitary matrices. All this means is that a matrix multiplied by its conjugate transpose gives us the identity matrix.
+The reason why we choose unitary matrices is that they preserve the length of our state vector.</p>
 <div class="math notranslate nohighlight">
 \[    UU^* = U^*U = I\]</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You will see that may quantum textbooks use the dagger symbol for a conjugate transpose. This is a phycist/mathematician terminology ambiguity and is essentially interchangeable.</p>
+<p>You will see that many quantum textbooks use the dagger symbol for a conjugate transpose. This is a physicist/mathematician terminology ambiguity and is interchangeable.</p>
 </div>
 <div class="section" id="identity-gate">
 <h2>Identity Gate<a class="headerlink" href="#identity-gate" title="Permalink to this headline">¶</a></h2>
@@ -300,7 +300,7 @@ The reason why we choose unitary matrices are because they preserve the length o
 <a class="reference internal image-reference" href="../_images/wire.png"><img alt="../_images/wire.png" src="../_images/wire.png" style="width: 328.2px; height: 38.1px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">The Identity gate</span><a class="headerlink" href="#wire" title="Permalink to this image">¶</a></p>
 </div>
-<p>The simplest gate is the identity gate, which doesn’t change the qubit. It is represented by the Identity matrix. While this might seem trivial, qubits are very fragile and its not quite easy to keep the qubit in its given state.</p>
+<p>The simplest gate is the identity gate, which doesn’t change the qubit. It is represented by the Identity matrix. While this might seem trivial, qubits are very fragile and it is not quite easy to keep the qubit in its given state.</p>
 </div>
 <div class="section" id="pauli-x-gate">
 <h2>Pauli-X Gate<a class="headerlink" href="#pauli-x-gate" title="Permalink to this headline">¶</a></h2>
@@ -308,14 +308,14 @@ The reason why we choose unitary matrices are because they preserve the length o
 <a class="reference internal image-reference" href="../_images/x-gate.PNG"><img alt="../_images/x-gate.PNG" src="../_images/x-gate.PNG" style="width: 331.5px; height: 94.8px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">The X gate</span><a class="headerlink" href="#x-gate" title="Permalink to this image">¶</a></p>
 </div>
-<p>Pauli gates are single qubit gates, i.e, they act on a single qubit. These represent rotations around the X, Y and Z axes. We will discuss only the Pauli-X gate here.
+<p>Pauli gates are single-qubit gates, i.e, they act on a single qubit. These represent rotations around the X, Y and Z axes. We will discuss only the Pauli-X gate here.
 As the name suggests, the Pauli-X gate performs a rotation about the X-axis and is equivalent to the NOT gate in classical computing. In matrix representation, it is given by:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} X = \begin{pmatrix}
 0 &amp; 1 \\
 1 &amp; 0
 \end{pmatrix}\end{split}\]</div>
-<p>Let’s see how the X gate acts on a qubit which is in the <span class="math notranslate nohighlight">\(|0\rangle\)</span> state. It is simply a matrix (X) multiplied by a vector (<span class="math notranslate nohighlight">\(|0\rangle\)</span>).</p>
+<p>Let’s see how the X gate acts on a qubit that is in the <span class="math notranslate nohighlight">\(|0\rangle\)</span> state. It is simply a matrix (X) multiplied by a vector (<span class="math notranslate nohighlight">\(|0\rangle\)</span>).</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}X |0\rangle = \begin{pmatrix}
 0 &amp; 1 \\
@@ -373,7 +373,7 @@ As the name suggests, the Pauli-X gate performs a rotation about the X-axis and 
 Z |0\rangle = |0\rangle \\
 Z |1\rangle =- |1\rangle
 \end{split}\]</div>
-<p>The Pauli-Z gate leaves the state <span class="math notranslate nohighlight">\(|0\rangle\)</span> as it is, however, changes the sign of <span class="math notranslate nohighlight">\(|1\rangle\)</span>. The change of sign represents a change in phase of the qubit.</p>
+<p>The Pauli-Z gate leaves the state <span class="math notranslate nohighlight">\(|0\rangle\)</span> as it is, however, changes the sign of <span class="math notranslate nohighlight">\(|1\rangle\)</span>. The change of sign represents a change in the phase of the qubit.</p>
 <p>The Pauli-Z gate represented in the matrix form is given by:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}Z = \begin{pmatrix}
@@ -387,8 +387,8 @@ Z |1\rangle =- |1\rangle
 </div>
 <div class="section" id="quantum-circuits">
 <h2>Quantum Circuits<a class="headerlink" href="#quantum-circuits" title="Permalink to this headline">¶</a></h2>
-<p>Quantum circuits represent a a sequence of manipulations that a qubit or multiple qubits go thorugh. The salmon lines you see in the figure are called wires. There can be multiple wires (symbolizing different qubits) in a circuit. Gates are applied from left to right and a measurement is performed at the end. We will leave measurement for the next section. In this section, we will learn how to build a circuit with gates.</p>
-<div class="note admonition">
+<p>Quantum circuits represent a sequence of manipulations that a qubit or multiple qubits go through. The salmon lines you see in the figure are called wires. There can be multiple wires (symbolizing different qubits) in a circuit. Gates are applied from left to right and a measurement is performed at the end. We will leave measurements for the next section. In this section, we will learn how to build a circuit with gates.</p>
+<div class="tip admonition">
 <p class="admonition-title">Example: Create a  circuit</p>
 <p>You are given a state <span class="math notranslate nohighlight">\(|0\rangle\)</span>. A Hadamard gate followed by a Pauli-X gate is applied to the qubit. Draw the circuit. What is the final state?</p>
 <div class="figure align-default" id="exercise-gate">

@@ -315,7 +315,7 @@
 </div>
 <div class="section" id="create-a-device">
 <h2>Create a device<a class="headerlink" href="#create-a-device" title="Permalink to this headline">¶</a></h2>
-<p>Create a device. <code class="docutils literal notranslate"><span class="pre">default.qubit</span></code> is a statevector simulator which allows us to simulate qubits. More about <a class="reference external" href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.device.html">qml.device here</a>. With the wires argument we can specify the number of qubits we are working with.</p>
+<p>Create a device. <code class="docutils literal notranslate"><span class="pre">default.qubit</span></code> is a state vector simulator that allows us to simulate qubits. More about <a class="reference external" href="https://pennylane.readthedocs.io/en/stable/code/api/pennylane.device.html">qml.device here</a>. With the wires argument, we can specify the number of qubits we are working with.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dev</span> <span class="o">=</span> <span class="n">qml</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;default.qubit&quot;</span><span class="p">,</span> <span class="n">wires</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -326,7 +326,7 @@
 </div>
 <div class="section" id="create-a-circuit">
 <h2>Create a circuit<a class="headerlink" href="#create-a-circuit" title="Permalink to this headline">¶</a></h2>
-<p>Let’s create our circuit. In PennyLane, quantum circuits are created as quantum functions. These quantum computations are represented as quantum node (QNode) objects. We create the QNodes with something called a qnode decorator. All you need to know about this for now is that you need to precede your function with <code class="docutils literal notranslate"><span class="pre">&#64;qml.qnode(dev)</span></code></p>
+<p>Let’s create our circuit. In PennyLane, quantum circuits are created as quantum functions. These quantum computations are represented as quantum node (QNode) objects. We create the QNodes with something called a qnode decorator. All you need to know about this, for now, is that you need to precede your function with <code class="docutils literal notranslate"><span class="pre">&#64;qml.qnode(dev)</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@qml</span><span class="o">.</span><span class="n">qnode</span><span class="p">(</span><span class="n">dev</span><span class="p">)</span> <span class="c1"># the decorator</span>

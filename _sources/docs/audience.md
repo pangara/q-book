@@ -31,7 +31,7 @@ This tutorial is for you if:
 ## Learning Outcomes
 By the end of this tutorial, you will
 
-* learn about single qubit systems and multi qubit systems, their mathematical representation 
+* learn about single qubit systems and multi-qubit systems, their mathematical representation 
 * learn about the mathematical explanations of superposition and entanglement
 * be able to manipulate quantum states using gates
 * learn to write short quantum programs using Pennylane

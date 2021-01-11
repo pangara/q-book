@@ -285,7 +285,7 @@
 <li><p>Alice has to send a qubit to Bob.</p></li>
 <li><p>Alice and Bob have a pre-shared Bell State</p></li>
 <li><p>Alice can send only classical information to Bob</p></li>
-<li><p>Alice doesn’t know the state of the qubit, even if she does, describing it would take infinite amount of classical information since qubits take value in a continuous space.</p></li>
+<li><p>Alice doesn’t know the state of the qubit, even if she does, describing it would take an infinite amount of classical information since qubits take value in a continuous space.</p></li>
 </ul>
 </div>
 <div class="section" id="solution">
@@ -306,7 +306,7 @@
 <p>Given Alice’s qubit <span class="math notranslate nohighlight">\(|q_0\rangle\)</span>, we wish to transfer this state to Bob’s <span class="math notranslate nohighlight">\(|q_2\rangle\)</span>.</p>
 <div class="section" id="prepare-the-bell-pair">
 <h3>Prepare the Bell Pair<a class="headerlink" href="#prepare-the-bell-pair" title="Permalink to this headline">¶</a></h3>
-<p>First a third party, Eve, creates an entangled pair and gives one of the qubits in this pair to Alice and the other qubit in this entangled pair to Bob.
+<p>First, a third party, Eve, creates an entangled pair and gives one of the qubits in this pair to Alice and the other qubit in this entangled pair to Bob.
 Let’s refer back to our diagram from the section on entanglement.</p>
 <div class="figure align-default" id="entangle-t">
 <a class="reference internal image-reference" href="../_images/entangle-t.png"><img alt="../_images/entangle-t.png" src="../_images/entangle-t.png" style="width: 727.2px; height: 293.2px;" /></a>
@@ -332,7 +332,7 @@ CNOT(|\psi_1\rangle) = \frac{|000\rangle + |011\rangle}{\sqrt 2}\end{split}\]</d
 <a class="reference internal image-reference" href="../_images/teleport-eq.png"><img alt="../_images/teleport-eq.png" src="../_images/teleport-eq.png" style="width: 462.9px; height: 92.39999999999999px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text"><span class="math notranslate nohighlight">\(|\psi_2\rangle\)</span> before measurement</span><a class="headerlink" href="#teleport-eq" title="Permalink to this image">¶</a></p>
 </div>
-<p>We can see from the figure and the equation that there are 4 possibilities for <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_1\rangle\)</span>.  From the circuit diagram we see that there there are two more gates after measurement, the Controlled-NOT and Controlled-Z gate, that are applied onto Bob’s <span class="math notranslate nohighlight">\(|q_2\rangle\)</span>. Note that <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_1\rangle\)</span> get destroyed upon measurement giving us two classical bits <span class="math notranslate nohighlight">\(c_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span>.</p>
+<p>We can see from the figure and the equation that there are 4 possibilities for <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_1\rangle\)</span>.  From the circuit diagram, we see that there there are two more gates after measurement, the Controlled-NOT and Controlled-Z gate, that is applied onto Bob’s <span class="math notranslate nohighlight">\(|q_2\rangle\)</span>. Note that <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_1\rangle\)</span> get destroyed upon measurement giving us two classical bits <span class="math notranslate nohighlight">\(c_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span>.</p>
 <p>The controlled gates at the end are there to apply the corresponding (NOT/X and Z) gates only if either or both of <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_1\rangle\)</span> are 1 resulting in the following table. Note that X and NOT are used here interchangeably.</p>
 <div class="figure align-default" id="teleport-results">
 <a class="reference internal image-reference" href="_static/teleport-results.png"><img alt="_static/teleport-results.png" src="_static/teleport-results.png" /></a>

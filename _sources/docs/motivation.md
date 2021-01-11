@@ -17,10 +17,10 @@ kernelspec:
 :scale: 70%
 :name: xkcd 
 
-A relevant xkcd comic on quantum teleportation. 
+A relevant XKCD comic on quantum teleportation. 
 ```
 
-Teleportation of humans and objects has been the subject of fascination for all of us since a very long time. One of the first examples of teleportation in literature were in an 1897 novel called [To Venus in Five Seconds by Fred T. Jane](https://en.wikipedia.org/wiki/To_Venus_in_Five_Seconds).  
+Teleportation of humans and objects has been the subject of fascination for all of us for a very long time. One of the first examples of teleportation in literature was in an 1897 novel called [To Venus in Five Seconds by Fred T. Jane](https://en.wikipedia.org/wiki/To_Venus_in_Five_Seconds).  
 
 In this tutorial, we won't discuss this kind of teleportation but we will discuss Quantum Teleportation, which is a scheme for the transfer of quantum information, which is _almost_ as cool as the teleportation of matter.
 
@@ -33,7 +33,7 @@ Quantum Teleportation is not only cool, but also has important implications to q
 :scale: 40%
 :name: teleport 
 
-The quantum teleportation circuit in full. 
+The complete quantum teleportation circuit  
 ```
 
 Quantum Teleportation is a technique for transferring quantum information from a source to a destination far away. The quantum teleportation circuit shown in the figure above has many components which we will discuss in detail in the next few sections. I introduce it here is so that you know what to expect from this tutorial. By the end of this tutorial, you will learn all the symbols used here and what they mean in the context of quantum computing.
