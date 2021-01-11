@@ -31,7 +31,7 @@ By combining the Hadamard gate and the CNOT gate, one can create an entangled st
 3. Apply the CNOT gate with the second qubit as the target qubit.
 
 ```{figure} /_static/entangle.PNG
-:scale: 50%
+:scale: 40%
 :name: entangle 
 
 Creation of a Bell Pair

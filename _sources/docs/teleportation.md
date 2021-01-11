@@ -13,7 +13,7 @@ kernelspec:
 
 # Teleportation
 
-The concepts of superposition and entanglement are what give quantum computing its power over classical computers. We have heard about teleportation, a miraculous form of transportation from one place to another. Quantum Teleportaion has a slightly different meaning, it enables quantum states to be transported across long distances without a need to send it directly. {cite}`bennett1993teleporting`
+The concepts of superposition and entanglement are what give quantum computing its power over classical computers. We have heard about teleportation, a miraculous form of transportation from one place to another. Quantum Teleportation has a slightly different meaning, it enables quantum states to be transported across long distances without a need to send it directly. {cite}`bennett1993teleporting`
 
 ## Problem Statement
 
@@ -29,7 +29,4 @@ The concepts of superposition and entanglement are what give quantum computing i
 * This recovers the state $\psi$!
 
 
-# Bibliography
 
-```{bibliography} ../_bibliography/references.bib
-```

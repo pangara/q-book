@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Single Qubit Gates &#8212; From Qubits to Quantum Teleportation</title>
+    <title>Bibliography &#8212; From Qubits to Quantum Teleportation</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -56,8 +56,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Multiple Qubit Systems and Gates" href="multi-qubit.html" />
-    <link rel="prev" title="Basics" href="qubits.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -87,7 +85,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="current nav sidenav_l1">
+    <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="audience.html">
    Before we start
@@ -98,8 +96,8 @@
    Basics
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="gates.html">
    Single Qubit Gates
   </a>
  </li>
@@ -162,11 +160,11 @@
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
-            href="../_sources/docs/gates.ipynb"><button type="button"
+            href="../_sources/docs/bibliography.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/gates.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/bibliography.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -191,7 +189,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/quantecon-mini-example/master?urlpath=tree/mini_book/docs/gates.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/quantecon-mini-example/master?urlpath=tree/mini_book/docs/bibliography.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -208,44 +206,6 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
-        <div class="tocsection onthispage pt-5 pb-3">
-            <i class="fas fa-list"></i> Contents
-        </div>
-        <nav id="bd-toc-nav">
-            <ul class="nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#identity-gate">
-   Identity Gate
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#pauli-x-gate">
-   Pauli-X Gate
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise">
-     Exercise
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hadamard-gate">
-   Hadamard Gate
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Exercise
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-        </nav>
-        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -253,97 +213,10 @@
         
               <div>
                 
-  <div class="section" id="single-qubit-gates">
-<span id="gates"></span><h1>Single Qubit Gates<a class="headerlink" href="#single-qubit-gates" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-default" id="gates-highlight">
-<a class="reference internal image-reference" href="../_images/gates-highlight.png"><img alt="../_images/gates-highlight.png" src="../_images/gates-highlight.png" style="width: 788.0px; height: 394.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Part of the quantum teleportation diagram with the qubits and gates highlighted.</span><a class="headerlink" href="#gates-highlight" title="Permalink to this image">¶</a></p>
-</div>
-<p>The boxes in yellow represent gates. We use gates to get from one state to another in the quantum universe. You can think of gates as small microwave pulses that transform the qubit and allow it to go from one state (say <span class="math notranslate nohighlight">\( |0\rangle \)</span>) to another state (say (say <span class="math notranslate nohighlight">\( |1\rangle \)</span>).</p>
-<div class="figure align-default" id="gate">
-<a class="reference internal image-reference" href="../_images/gate.jpg"><img alt="../_images/gate.jpg" src="../_images/gate.jpg" style="width: 480.0px; height: 270.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">A quantum gate</span><a class="headerlink" href="#gate" title="Permalink to this image">¶</a></p>
-</div>
-<p>We will go over a few important single qubit gates for quantum teleportation. These are the Pauli X gate and the the Hadamard Gate.
-Unlike states which are vectors, gates are matrices, specifically these are unitary matrices. All this means is that a matrix multiplied by its conjugate transpose gives us the identity matrix.
-The reason why we choose unitary matrices are because they preserve the length of our state vector.</p>
-<div class="math notranslate nohighlight">
-\[    UU^* = U^*U = I\]</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>You will see that may quantum textbooks use the dagger symbol for a conjugate transpose. This is a phycist/mathematician terminology ambiguity and is essentially interchangeable.</p>
-</div>
-<div class="section" id="identity-gate">
-<h2>Identity Gate<a class="headerlink" href="#identity-gate" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="wire">
-<a class="reference internal image-reference" href="../_images/wire.png"><img alt="../_images/wire.png" src="../_images/wire.png" style="width: 328.2px; height: 38.1px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">The Identity gate</span><a class="headerlink" href="#wire" title="Permalink to this image">¶</a></p>
-</div>
-<p>The simplest gate is the identity gate, which doesn’t change the qubit. It is represented by the Identity matrix. While this might seem trivial, qubits are very fragile and its not quite easy to keep the qubit in its given state.</p>
-</div>
-<div class="section" id="pauli-x-gate">
-<h2>Pauli-X Gate<a class="headerlink" href="#pauli-x-gate" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="x-gate">
-<a class="reference internal image-reference" href="../_images/x-gate.PNG"><img alt="../_images/x-gate.PNG" src="../_images/x-gate.PNG" style="width: 331.5px; height: 94.8px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">The X gate</span><a class="headerlink" href="#x-gate" title="Permalink to this image">¶</a></p>
-</div>
-<p>Pauli gates are single qubit gates, i.e, they act on a single qubit. These represent rotations around the X, Y and Z axes. We will discuss only the Pauli-X gate here.
-As the name suggests, the Pauli-X gate performs a rotation about the X-axis and is equivalent to the NOT gate in classical computing. In matrix representation, it is given by:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split} X = \begin{pmatrix}
-0 &amp; 1 \\
-1 &amp; 0
-\end{pmatrix}\end{split}\]</div>
-<p>Let’s see how the X gate acts on a qubit which is in the <span class="math notranslate nohighlight">\(|0\rangle\)</span> state. It is simply a matrix (X) multiplied by a vector (<span class="math notranslate nohighlight">\(|0\rangle\)</span>).</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}X |0\rangle = \begin{pmatrix}
-0 &amp; 1 \\
-1 &amp; 0
-\end{pmatrix}\begin{pmatrix}
-1\\ 0 \end{pmatrix} = \begin{pmatrix}
-0 \\ 1 
-\end{pmatrix} = |1\rangle\end{split}\]</div>
-<div class="section" id="exercise">
-<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
-<p>You are given a state <span class="math notranslate nohighlight">\( |\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle \)</span>. What happens to the state when the Pauli-X gate is applied to it?</p>
-</div>
-</div>
-<div class="section" id="hadamard-gate">
-<h2>Hadamard Gate<a class="headerlink" href="#hadamard-gate" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="id1">
-<a class="reference internal image-reference" href="../_images/hadamard.png"><img alt="../_images/hadamard.png" src="../_images/hadamard.png" style="width: 371.4px; height: 94.8px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">The X gate</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
-</div>
-<p>The Hadamard gate is a famous one, it takes a state (say |0\rangle) into a superposition state. This is also a single qubit gate and is given by:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}H = \frac{1}{\sqrt2}\begin{pmatrix}
-1 &amp; 1 \\
-1 &amp; -1
-\end{pmatrix}\end{split}\]</div>
-<p>Let’s see how the gate works.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}H |0&gt; = \frac{1}{\sqrt2}\begin{pmatrix}
-1 &amp; 1 \\
-1 &amp; -1
-\end{pmatrix}\begin{pmatrix}
-1\\ 0 \end{pmatrix} = \frac{1}{\sqrt2}\begin{pmatrix}
-1 \\ 1 
-\end{pmatrix} = \frac{|0&gt;+|1&gt;}{\sqrt2}   \end{split}\]</div>
-<p>Similarly,</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\frac{1}{\sqrt2}\begin{pmatrix}
-1 &amp; 1 \\
-1 &amp; -1
-\end{pmatrix}\begin{pmatrix}
-0\\ 1 \end{pmatrix} = \frac{1}{\sqrt2}\begin{pmatrix}
-1 \\ -1 
-\end{pmatrix} = \frac{|0&gt;-|1&gt;}{\sqrt2} 
-\end{split}\]</div>
-<div class="section" id="id2">
-<h3>Exercise<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>You are given a state <span class="math notranslate nohighlight">\( |\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle \)</span>. What happens to the state when the Hadamard gate is applied to it?</p>
-</div>
-</div>
+  <p id="bibliography">Some references from this tutorial</p>
+<div class="section" id="id1">
+<h1>Bibliography<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p id="bibtex-bibliography-docs/bibliography-0"></p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -374,8 +247,6 @@ As the name suggests, the Pauli-X gate performs a rotation about the X-axis and 
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="qubits.html" title="previous page">Basics</a>
-    <a class='right-next' id="next-link" href="multi-qubit.html" title="next page">Multiple Qubit Systems and Gates</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

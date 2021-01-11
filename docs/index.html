@@ -122,11 +122,6 @@
    Teleportation
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="teleportation.html#bibliography">
-   Bibliography
-  </a>
- </li>
 </ul>
 
 </nav> <!-- To handle the deprecated key -->
@@ -192,6 +187,30 @@
     <!-- Table of contents -->
     <div class="d-none d-md-block col-md-2 bd-toc show">
         
+        <div class="tocsection onthispage pt-5 pb-3">
+            <i class="fas fa-list"></i> Contents
+        </div>
+        <nav id="bd-toc-nav">
+            <ul class="nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#learning-outcomes">
+   Learning Outcomes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#medium">
+   Medium
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#audience">
+   Audience
+  </a>
+ </li>
+</ul>
+
+        </nav>
+        
     </div>
 </div>
     <div id="main-content" class="row">
@@ -207,13 +226,41 @@
 <li><p>focuses on the basics of quantum computing that are necessary to understand quantum teleportation and</p></li>
 <li><p>explains the quantum teleportation algorithm.</p></li>
 </ol>
-<p>This tutorial has been built in the form of an interactive textbook and has been built using <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter Books</a>. This tutorial is suitable for someone who is between high school and first year university and is curious to get started with quantum computing.</p>
+<p>I chose quantum teleportation, because it is one of the core primitives of quantum computing and keeps popping up in popular science articles.
+This tutorial has been built in the form of an interactive textbook and has been built using <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter Books</a>.</p>
+<div class="section" id="learning-outcomes">
+<h2>Learning Outcomes<a class="headerlink" href="#learning-outcomes" title="Permalink to this headline">¶</a></h2>
+<p>By the end of this tutorial, the reader will:</p>
+<ul class="simple">
+<li><p>learn about single qubit systems and multi qubit systems, their mathematical representation</p></li>
+<li><p>learn about the mathematical explanations of superposition and entanglement</p></li>
+<li><p>be able to manipulate quantum states using gates</p></li>
+<li><p>learn to write short quantum programs using Pennylane</p></li>
+<li><p>understand quantum teleportation mathematically</p></li>
+<li><p>learn how to build the quantum teleportation circuit</p></li>
+</ul>
+</div>
+<div class="section" id="medium">
+<h2>Medium<a class="headerlink" href="#medium" title="Permalink to this headline">¶</a></h2>
+<p>Since the content was to be designed for an online educational environment, after a lot of contemplation, I thought something in the style of jupyter notebooks would be appropriate because one could share code, text, equations, and visualizations. Jupyter Textbooks seemed appropriate for this because of the following reasons:</p>
+<ol class="simple">
+<li><p>They have all the advantages of jupyter notebooks</p></li>
+<li><p>They allow addition of LaTeX-style math using MathJax, and bibtex files for references</p></li>
+<li><p>They are open source (as a part of the <a class="reference external" href="https://executablebooks.org/en/latest/">Executable Book Project</a>)</p></li>
+<li><p>They have a command line interface to quickly build textbooks</p></li>
+<li><p>They are easy to deploy with github pages/actions</p></li>
+</ol>
+</div>
+<div class="section" id="audience">
+<h2>Audience<a class="headerlink" href="#audience" title="Permalink to this headline">¶</a></h2>
+<p>This tutorial is suitable for someone who is between high school and first year university and is curious to get started with quantum computing. Knowledge of quantum mechanics/physics or computer science is not required to understand this tutorial. Some basic linear algebra (matrices, vectors), complex numbers, probability is useful to understand the concepts.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This repository is based on Scientific Python Quickstart: a short sequence of lectures on Python programming for scientific work, written by <a class="reference external" href="http://www.tomsargent.com/">Thomas J.  Sargent</a> and <a class="reference external" href="https://johnstachurski.net/">John Stachurski</a>.This uses the new Sphinx-based <a class="reference external" href="https://beta.jupyterbook.org/intro.html">Jupyter Book 2.0</a> tool set, as part of the <a class="reference external" href="https://ebp.jupyterbook.org/en/latest/">ExecutableBookProject</a>.<br />
 Instructions for how to build them from source can be found in the Jupyter Book documentation.</p>
 </div>
 <div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 

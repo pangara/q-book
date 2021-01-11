@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Multiple Qubit Systems and Gates &#8212; From Qubits to Quantum Teleportation</title>
+    <title>Motivation &#8212; From Qubits to Quantum Teleportation</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -56,8 +56,6 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Entanglement" href="entanglement.html" />
-    <link rel="prev" title="Single Qubit Gates" href="gates.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -87,7 +85,7 @@
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form>
 <nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
-    <ul class="current nav sidenav_l1">
+    <ul class="nav sidenav_l1">
  <li class="toctree-l1">
   <a class="reference internal" href="audience.html">
    Before we start
@@ -103,8 +101,8 @@
    Single Qubit Gates
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="multi-qubit.html">
    Multiple Qubit Systems and Gates
   </a>
  </li>
@@ -162,11 +160,11 @@
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
-            href="../_sources/docs/multi-qubit.ipynb"><button type="button"
+            href="../_sources/docs/motivation.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/multi-qubit.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/motivation.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -191,7 +189,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/quantecon-mini-example/master?urlpath=tree/mini_book/docs/multi-qubit.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/quantecon-mini-example/master?urlpath=tree/mini_book/docs/motivation.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -214,45 +212,9 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tensor-products">
-   Tensor Products
+  <a class="reference internal nav-link" href="#quantum-teleportation">
+   Quantum Teleportation
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#combining-qubits">
-   Combining qubits
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise">
-     Exercise
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution">
-       Solution
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#states-in-a-two-qubit-system">
-   States in a two qubit system
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#cnot-gate">
-   CNOT Gate
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Exercise
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -265,120 +227,24 @@
         
               <div>
                 
-  <div class="section" id="multiple-qubit-systems-and-gates">
-<span id="multi-qubit"></span><h1>Multiple Qubit Systems and Gates<a class="headerlink" href="#multiple-qubit-systems-and-gates" title="Permalink to this headline">¶</a></h1>
-<p>A qubit as we know is a single unit of quantum computation, and is represented by a vector with  <span class="math notranslate nohighlight">\( |0\rangle = \begin{pmatrix} 1\\ 0 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(|1\rangle = \begin{pmatrix} 0\\ 1 \end{pmatrix}\)</span>. As the number of qubits increases, we have to take into account a combined system of qubits. Qubits combine via tensor products.</p>
-<div class="section" id="tensor-products">
-<h2>Tensor Products<a class="headerlink" href="#tensor-products" title="Permalink to this headline">¶</a></h2>
-<p>Tensor products are different from regular  matrix multiplication, such that the resulting matrix has a higher dimension than the matrices we started out with. Tensor products work by multiplying every element of one matrix with every other element of the other matrix.</p>
+  <div class="section" id="motivation">
+<span id="id1"></span><h1>Motivation<a class="headerlink" href="#motivation" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-default" id="xkcd">
+<a class="reference internal image-reference" href="../_images/xkcd.png"><img alt="../_images/xkcd.png" src="../_images/xkcd.png" style="width: 518.0px; height: 137.89999999999998px;" /></a>
+<p class="caption"><span class="caption-text">A relevant xkcd comic on quantum teleportation.</span><a class="headerlink" href="#xkcd" title="Permalink to this image">¶</a></p>
 </div>
-<div class="section" id="combining-qubits">
-<h2>Combining qubits<a class="headerlink" href="#combining-qubits" title="Permalink to this headline">¶</a></h2>
-<p>Let’s create a two qubit system.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}|0\rangle \otimes |0\rangle = \begin{bmatrix}1 \\0\end{bmatrix} \otimes \begin{bmatrix}1 \\0\end{bmatrix} = \begin{bmatrix}1\begin{bmatrix}1 \\0\end{bmatrix} \\0\begin{bmatrix}1 \\0\end{bmatrix}\end{bmatrix} = \begin{bmatrix}1 \\0 \\ 0 \\ 0 \end{bmatrix}
-\end{split}\]</div>
-<div class="section" id="exercise">
-<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
-<p>Given that we have two single qubit quantum systems with the following states, lets combine them via a tensor product.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}|\psi&gt; = \alpha_1|0&gt; + \beta_1|1&gt; \\
-|\phi&gt; = \alpha_2|0&gt; + \beta_2|1&gt;\end{split}\]</div>
-<div class="section" id="solution">
-<h4>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h4>
-<div class="math notranslate nohighlight">
-\[
-|\psi&gt; \otimes |\phi&gt; = (\alpha_1|0&gt; + \beta_1|1&gt;) \otimes (\alpha_2|0&gt; + \beta_2|1&gt;) 
-\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-|\psi&gt; \otimes |\phi&gt; = 
-(\alpha_1\begin{bmatrix}1 \\0\end{bmatrix}
- + \beta_1\begin{bmatrix}0 \\1\end{bmatrix})
- \otimes 
-(\alpha_2\begin{bmatrix}1 \\0\end{bmatrix} 
-+ \beta_2\begin{bmatrix}0 \\1\end{bmatrix}) 
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}|\psi&gt; \otimes |\phi&gt; = 
-\alpha_1\alpha_2\begin{bmatrix}1 \\0\end{bmatrix}\otimes\begin{bmatrix}1 \\0\end{bmatrix}
-+
-\alpha_1\beta_2\begin{bmatrix}1 \\0\end{bmatrix}\otimes\begin{bmatrix}0 \\1\end{bmatrix}
-+
-\beta_1\alpha_2\begin{bmatrix}0 \\1\end{bmatrix}\otimes\begin{bmatrix}1 \\0\end{bmatrix}
-+
-\beta_1\beta_2\begin{bmatrix}0 \\1\end{bmatrix}\otimes\begin{bmatrix}0 \\1\end{bmatrix} 
-\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-|\psi&gt; \otimes |\phi&gt; = 
-\alpha_1\alpha_2\begin{bmatrix}1 \begin{bmatrix}1 \\0\end{bmatrix}\\0\begin{bmatrix}1 \\0\end{bmatrix}\end{bmatrix}+
-\alpha_1\beta_2\begin{bmatrix}1 \begin{bmatrix}0 \\1\end{bmatrix}
- \\0 \begin{bmatrix}0 \\1\end{bmatrix}
-\end{bmatrix}+
-\beta_1\alpha_2\begin{bmatrix}0 \begin{bmatrix}1 \\0\end{bmatrix} \\1\begin{bmatrix}1 \\0\end{bmatrix}\end{bmatrix}
-+
-\beta_1\beta_2\begin{bmatrix}0 \begin{bmatrix}0 \\1\end{bmatrix}
- \\1\begin{bmatrix}0 \\1\end{bmatrix}
-\end{bmatrix} \end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[\begin{split}|\psi&gt; \otimes |\phi&gt; = 
-\alpha_1\alpha_2\begin{bmatrix}1 \\ 0 \\0 \\0\end{bmatrix}+
-\alpha_1\beta_2\begin{bmatrix}0 \\1\\ 0 \\ 0\end{bmatrix}+
-\beta_1\alpha_2\begin{bmatrix}0 \\ 0 \\ 1 \\ 0\end{bmatrix}
-+
-\beta_1\beta_2\begin{bmatrix}0 \\0 \\0 \\1\end{bmatrix}\end{split}\]</div>
-<div class="math notranslate nohighlight">
-\[
-|\psi \phi&gt; = \alpha |00&gt; + \beta|01&gt; + \gamma |10&gt; + \delta |11&gt;
-\]</div>
+<p>Teleportation of humans and objects has been the subject of fascination for all of us since a very long time. One of the first examples of teleportation in literature were in an 1897 novel called <a class="reference external" href="https://en.wikipedia.org/wiki/To_Venus_in_Five_Seconds">To Venus in Five Seconds by Fred T. Jane</a>.</p>
+<p>In this tutorial, we won’t discuss this kind of teleportation but we will discuss Quantum Teleportation, which is a scheme for the transfer of quantum information, which is <em>almost</em> as cool as the teleportation of matter.</p>
+<p>In 1993, Bennett et al.,<span class="bibtex" id="id2">[bennett1993teleporting]</span> showed that quantum teleportation was actually possible using the rules of quantum mechanics, and has since been followed by <a class="reference external" href="https://news.fnal.gov/2020/12/fermilab-and-partners-achieve-sustained-high-fidelity-quantum-teleportation/">experiments that demonstrate quantum teleportation</a>.</p>
+<p>Quantum Teleportation is not only cool, but also has important implications to quantum computing, quantum communication, and also interestingly to quantum hardware too~<span class="bibtex" id="id3">[Pirandola_2015]</span>.</p>
+<div class="section" id="quantum-teleportation">
+<h2>Quantum Teleportation<a class="headerlink" href="#quantum-teleportation" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="teleport">
+<a class="reference internal image-reference" href="../_images/teleport.png"><img alt="../_images/teleport.png" src="../_images/teleport.png" style="width: 787.6px; height: 393.6px;" /></a>
+<p class="caption"><span class="caption-text">The quantum teleportation circuit</span><a class="headerlink" href="#teleport" title="Permalink to this image">¶</a></p>
 </div>
-</div>
-</div>
-<div class="section" id="states-in-a-two-qubit-system">
-<h2>States in a two qubit system<a class="headerlink" href="#states-in-a-two-qubit-system" title="Permalink to this headline">¶</a></h2>
-<p>When we have two quantum states in the same systems, the qubit can be in one to all of the following states <span class="math notranslate nohighlight">\(|00\rangle\)</span>, <span class="math notranslate nohighlight">\(|01\rangle\)</span>, <span class="math notranslate nohighlight">\(|10\rangle\)</span>, <span class="math notranslate nohighlight">\(|11\rangle\)</span>.</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}|\psi\rangle~= \alpha~|00\rangle+~\beta~|01\rangle+~\gamma~|10\rangle+~\delta~|11\rangle\\
-|\alpha|^2 + |\beta|^2 + |\gamma|^2 + |\delta|^2  =1\end{split}\]</div>
-<p>As the number of qubits increases, the number of states it can be in also increases. In general with an <span class="math notranslate nohighlight">\(n\)</span>-qubit system, you can have <span class="math notranslate nohighlight">\(2^n\)</span> states.</p>
-</div>
-<div class="section" id="cnot-gate">
-<h2>CNOT Gate<a class="headerlink" href="#cnot-gate" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="x-gate">
-<a class="reference internal image-reference" href="../_images/cnot.png"><img alt="../_images/cnot.png" src="../_images/cnot.png" style="width: 316.2px; height: 169.79999999999998px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">The CNOT gate</span><a class="headerlink" href="#x-gate" title="Permalink to this image">¶</a></p>
-</div>
-<p>Now that we know how to create a two-qubit system, we can work woth a two qubit gate. For this tutorial, we will go over the CNOT gate.
-The CNOT gate is given by the matrix:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-U = \begin{pmatrix}
-1 &amp; 0 &amp; 0 &amp; 0 \\
-0 &amp; 1 &amp; 0 &amp; 0 \\
-0 &amp; 0 &amp; 0 &amp; 1 \\
-0 &amp; 0 &amp; 1 &amp; 0 \\
-\end{pmatrix}
-\end{split}\]</div>
-<p>The CNOT gate flips the second qubit if the first qubit is 1, and leaves the second qubit as it id if the first qubit is 0. THe first qubit remains unchanged.
-Suppose we are given a state <span class="math notranslate nohighlight">\(|11\rangle\)</span>, applying the CNOT gate changes this state to <span class="math notranslate nohighlight">\(|10\rangle\)</span>. If we were given a superposition state:</p>
-<div class="math notranslate nohighlight">
-\[
-|\psi\rangle~= \alpha~|00\rangle+~\beta~|01\rangle+~\gamma~|10\rangle+~\delta~|11\rangle
-\]</div>
-<p>Applying the CNOT gate would give us:</p>
-<div class="math notranslate nohighlight">
-\[
-CNOT|\psi\rangle~=  \alpha~|00\rangle+~\beta~|01\rangle+~\gamma~|11\rangle+~\delta~|10\rangle
-\]</div>
-<div class="section" id="id1">
-<h3>Exercise<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Given the matrix representation of the CNOT gate, verify that:</p>
-<div class="math notranslate nohighlight">
-\[
-CNOT|\psi\rangle~=  \alpha~|00\rangle+~\beta~|01\rangle+~\gamma~|11\rangle+~\delta~|10\rangle
-\]</div>
-</div>
+<p>Quantum Teleportation is a technique for transferring quantum information from a source to a destination far away. The quantum teleportation circuit shown in the figure above has many components which we will discuss in detail in the next few sections. I introduce it here is so that you know what to expect from this tutorial. By the end of this tutorial, you will learn all the symbols used here and what they mean in the context of quantum computing.</p>
+<p><strong>Let’s begin our journey!</strong></p>
 </div>
 </div>
 
@@ -410,8 +276,6 @@ CNOT|\psi\rangle~=  \alpha~|00\rangle+~\beta~|01\rangle+~\gamma~|11\rangle+~\del
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="gates.html" title="previous page">Single Qubit Gates</a>
-    <a class='right-next' id="next-link" href="entanglement.html" title="next page">Entanglement</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

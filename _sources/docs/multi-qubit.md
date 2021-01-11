@@ -117,6 +117,15 @@ $$
 
 ## CNOT Gate
 
+
+```{figure} /_static/cnot.png
+:scale: 30%
+:name: x-gate 
+
+The CNOT gate
+```
+
+
 Now that we know how to create a two-qubit system, we can work woth a two qubit gate. For this tutorial, we will go over the CNOT gate. 
 The CNOT gate is given by the matrix:
 
