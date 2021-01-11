@@ -108,9 +108,9 @@ You are given a state $ |\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle $. What
 
 ```{figure} /_static/hadamard.png
 :scale: 30%
-:name: x-gate 
+:name: h-gate 
 
-The X gate
+The Hadamard gate
 ```
 
 The Hadamard gate is a famous one, it takes a state (say |0\rangle) into a superposition state. This is also a single qubit gate and is given by:
@@ -152,11 +152,64 @@ $$
 $$
 
 
-
-
-
 ```{admonition} Exercise 2
 :class: tip
 
 You are given a state $ |\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle $. What happens to the state when the Hadamard gate is applied to it?  
+```
+
+## Pauli-Z Gate
+The Pauli-Z gate performs a rotation about the Z-axis. 
+
+$$
+Z |0\rangle = |0\rangle \\
+Z |1\rangle =- |1\rangle
+$$
+
+The Pauli-Z gate leaves the state $|0\rangle$ as it is, however, changes the sign of $|1\rangle$. The change of sign represents a change in phase of the qubit. 
+
+The Pauli-Z gate represented in the matrix form is given by:
+
+$$
+
+Z = \begin{pmatrix}
+1 & 0 \\
+0 & -1
+\end{pmatrix}
+
+$$
+
+```{admonition} Exercise 
+:class: tip
+
+Given the matrix representation of the Pauli-Z gate, what happens when you apply a Pauli-Z gate to the states $|0\rangle$ and $|1\rangle$? Hint: Start with the vector representations of $|0\rangle$ and $|1\rangle$.
+
+```
+
+
+## Quantum Circuits
+Quantum circuits represent a a sequence of manipulations that a qubit or multiple qubits go thorugh. The salmon lines you see in the figure are called wires. There can be multiple wires (symbolizing different qubits) in a circuit. Gates are applied from left to right and a measurement is performed at the end. We will leave measurement for the next section. In this section, we will learn how to build a circuit with gates. 
+
+
+```{admonition} Example: Create a  circuit
+:class: note
+
+You are given a state $|0\rangle$. A Hadamard gate followed by a Pauli-X gate is applied to the qubit. Draw the circuit. What is the final state? 
+
+```{figure} /_static/exercise-gate .png
+:scale: 30%
+:name: exercise-gate 
+Solution
+```
+
+```
+
+
+
+```{admonition} Exercise 3: Create circuits and calculate the final state
+:class: tip
+
+1. You are given a state $|1\rangle$. A Pauli-X gate followed by another Pauli-X gate is applied to the qubit. Draw the circuit. What is the final state? 
+ 
+
 ```

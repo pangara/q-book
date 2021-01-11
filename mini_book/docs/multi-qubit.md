@@ -180,3 +180,17 @@ CNOT|\psi\rangle~=  \alpha~|00\rangle+~\beta~|01\rangle+~\gamma~|11\rangle+~\del
 $$
 
 ```
+
+## Controlled-Z gate
+The controlled-Z gate is very similar to the CNOT gate. Here, instead of flipping the target qubit when the source qubit is 1, a Pauli-Z gate is applied to the target qubit. 
+
+If we were given this state:
+$$
+|\psi\rangle~= \alpha~|00\rangle+~\beta~|01\rangle+~\gamma~|10\rangle+~\delta~|11\rangle
+$$
+
+Applying the Controlled-Z gate would give us:
+
+$$
+CZ|\psi\rangle~=  \alpha~|00\rangle+~\beta~|01\rangle+~\gamma~|10\rangle-~\delta~|11\rangle
+$$
