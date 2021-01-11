@@ -125,7 +125,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="teleportation.html">
-   Teleportation
+   Quantum Teleportation
   </a>
  </li>
  <li class="toctree-l1">
@@ -243,6 +243,11 @@
    CNOT Gate
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#controlled-z-gate">
+   Controlled-Z gate
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -259,7 +264,7 @@
 <p>A qubit as we know is a single unit of quantum computation, and is represented by a vector with  <span class="math notranslate nohighlight">\( |0\rangle = \begin{pmatrix} 1\\ 0 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(|1\rangle = \begin{pmatrix} 0\\ 1 \end{pmatrix}\)</span>. As the number of qubits increases, we have to take into account a combined system of qubits. Qubits combine via tensor products.</p>
 <div class="figure align-default" id="multi-qubit-highlight">
 <a class="reference internal image-reference" href="../_images/multi-qubit-highlight.png"><img alt="../_images/multi-qubit-highlight.png" src="../_images/multi-qubit-highlight.png" style="width: 788.0px; height: 394.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Part of the quantum teleportation diagram with the qubits, single qubit gates, two-qubit gates, and measurement highlighted.</span><a class="headerlink" href="#multi-qubit-highlight" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">Part of the quantum teleportation diagram with the qubits, single qubit gates, two-qubit gates, and measurement highlighted.</span><a class="headerlink" href="#multi-qubit-highlight" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="tensor-products">
 <h2>Tensor Products<a class="headerlink" href="#tensor-products" title="Permalink to this headline">¶</a></h2>
@@ -340,7 +345,7 @@
 <h2>CNOT Gate<a class="headerlink" href="#cnot-gate" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="x-gate">
 <a class="reference internal image-reference" href="../_images/cnot.png"><img alt="../_images/cnot.png" src="../_images/cnot.png" style="width: 316.2px; height: 169.79999999999998px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 13 </span><span class="caption-text">The CNOT gate</span><a class="headerlink" href="#x-gate" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 14 </span><span class="caption-text">The CNOT gate</span><a class="headerlink" href="#x-gate" title="Permalink to this image">¶</a></p>
 </div>
 <p>Now that we know how to create a two-qubit system, we can work woth a two qubit gate. For this tutorial, we will go over the CNOT gate.
 The CNOT gate is given by the matrix:</p>
@@ -372,6 +377,19 @@ CNOT|\psi\rangle~=  \alpha~|00\rangle+~\beta~|01\rangle+~\gamma~|11\rangle+~\del
 CNOT|\psi\rangle~=  \alpha~|00\rangle+~\beta~|01\rangle+~\gamma~|11\rangle+~\delta~|10\rangle
 \]</div>
 </div>
+</div>
+<div class="section" id="controlled-z-gate">
+<h2>Controlled-Z gate<a class="headerlink" href="#controlled-z-gate" title="Permalink to this headline">¶</a></h2>
+<p>The controlled-Z gate is very similar to the CNOT gate. Here, instead of flipping the target qubit when the source qubit is 1, a Pauli-Z gate is applied to the target qubit.</p>
+<p>If we were given this state:
+$<span class="math notranslate nohighlight">\(
+|\psi\rangle~= \alpha~|00\rangle+~\beta~|01\rangle+~\gamma~|10\rangle+~\delta~|11\rangle
+\)</span>$</p>
+<p>Applying the Controlled-Z gate would give us:</p>
+<div class="math notranslate nohighlight">
+\[
+CZ|\psi\rangle~=  \alpha~|00\rangle+~\beta~|01\rangle+~\gamma~|10\rangle-~\delta~|11\rangle
+\]</div>
 </div>
 </div>
 

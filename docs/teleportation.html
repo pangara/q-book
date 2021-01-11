@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Teleportation &#8212; From Qubits to Quantum Teleportation</title>
+    <title>Quantum Teleportation &#8212; From Qubits to Quantum Teleportation</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -125,7 +125,7 @@
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Teleportation
+   Quantum Teleportation
   </a>
  </li>
  <li class="toctree-l1">
@@ -249,8 +249,8 @@
         
               <div>
                 
-  <div class="section" id="teleportation">
-<span id="id1"></span><h1>Teleportation<a class="headerlink" href="#teleportation" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="quantum-teleportation">
+<span id="teleportation"></span><h1>Quantum Teleportation<a class="headerlink" href="#quantum-teleportation" title="Permalink to this headline">¶</a></h1>
 <p>We are now ready to understand how the teleportation circuit works. From our section on motivation, we understand that teleportation is a process of sending quantum information. Sounds simple enough, but we have a problem called the <strong>no-cloning theorem</strong>. The no-cloning theorem is a result of quantum mechanics which forbids the creation of identical copies of an arbitrary unknown quantum state.</p>
 <div class="section" id="problem-statement">
 <h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h2>
@@ -272,6 +272,39 @@
 </div>
 <div class="section" id="a-step-by-step-explanation">
 <h2>A step-by-step explanation<a class="headerlink" href="#a-step-by-step-explanation" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-default" id="teleport">
+<a class="reference internal image-reference" href="../_images/teleport.png"><img alt="../_images/teleport.png" src="../_images/teleport.png" style="width: 787.6px; height: 393.6px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 17 </span><span class="caption-text">The quantum teleportation circuit</span><a class="headerlink" href="#teleport" title="Permalink to this image">¶</a></p>
+</div>
+<p>Given Alice’s qubit <span class="math notranslate nohighlight">\(|q_0\rangle\)</span>, we wish to transfer this state to Bob’s <span class="math notranslate nohighlight">\(|q_2\rangle\)</span>. First a third party, Eve, creates an entangled pair and gives one of the qubits in this pair to Alice and the other qubit in this entangled pair to Bob.
+Let’s refer back to our diagram from the section on entanglement.</p>
+<div class="figure align-default" id="entangle-t">
+<a class="reference internal image-reference" href="../_images/entangle-t.png"><img alt="../_images/entangle-t.png" src="../_images/entangle-t.png" style="width: 727.2px; height: 293.2px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Creation of a Bell Pair</span><a class="headerlink" href="#entangle-t" title="Permalink to this image">¶</a></p>
+</div>
+<p>Now, we start with <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> in the state <span class="math notranslate nohighlight">\(|0\rangle\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[|\psi_1\rangle = |0\rangle \frac{|00\rangle + |11\rangle}{\sqrt 2}\]</div>
+<p>Applying the CNOT gate between <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_1\rangle\)</span>, we observe no change since the source qubit is in the state <span class="math notranslate nohighlight">\(|0\rangle\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}|\psi_1\rangle =  \frac{|000\rangle + |011\rangle}{\sqrt 2} \\
+CNOT(|\psi_1\rangle) = \frac{|000\rangle + |011\rangle}{\sqrt 2}\end{split}\]</div>
+<p>Now we apply the Hadamard gate to this state to get</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}H(CNOT(|\psi_1\rangle)) = H(\frac{|000\rangle + |011\rangle}{\sqrt 2}) \\
+|\psi_2\rangle = \frac{|000\rangle + |100\rangle}{2} +  \frac{|011\rangle + |111\rangle}{2}
+\end{split}\]</div>
+<p>At this point, we perform two measurements on <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_1\rangle\)</span>.</p>
+<div class="figure align-default" id="teleport-eq">
+<a class="reference internal image-reference" href="../_images/teleport-eq.png"><img alt="../_images/teleport-eq.png" src="../_images/teleport-eq.png" style="width: 462.9px; height: 92.39999999999999px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text"><span class="math notranslate nohighlight">\(|\psi_2\rangle\)</span> before measurement</span><a class="headerlink" href="#teleport-eq" title="Permalink to this image">¶</a></p>
+</div>
+<p>We can see from the figure and the equation that there are 4 possibilities for <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_1\rangle\)</span>.  From the circuit diagram we see that there there are two more gates after measurement, the Controlled-NOT and Controlled-Z gate, that are applied onto Bob’s <span class="math notranslate nohighlight">\(|q_2\rangle\)</span>. Note that <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_1\rangle\)</span> get destroyed upon measurement giving us two classical bits <span class="math notranslate nohighlight">\(c_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span>.</p>
+<p>The controlled gates at the end are there to apply the corresponding (NOT/X and Z) gates only if either or both of <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_1\rangle\)</span> are 1 resulting in the following table. Note that X and NOT are used here interchangeably.</p>
+<div class="figure align-default" id="teleport-results">
+<a class="reference internal image-reference" href="_static/teleport-results.png"><img alt="_static/teleport-results.png" src="_static/teleport-results.png" /></a>
+<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">When to apply the controlled-NOT and controlled-Z gates</span><a class="headerlink" href="#teleport-results" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 

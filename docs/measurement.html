@@ -125,7 +125,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="teleportation.html">
-   Teleportation
+   Quantum Teleportation
   </a>
  </li>
  <li class="toctree-l1">
@@ -228,6 +228,11 @@
    A guessing game
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#qubit-measurement">
+   Qubit Measurement
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -245,13 +250,13 @@
 <p>For now, we will think of measurement as a probability and stick to the computational basis.</p>
 <div class="figure align-default" id="measurement-highlight">
 <a class="reference internal image-reference" href="../_images/measurement-highlight.png"><img alt="../_images/measurement-highlight.png" src="../_images/measurement-highlight.png" style="width: 788.0px; height: 394.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Part of the quantum teleportation diagram with the qubits, gates, and measurement highlighted.</span><a class="headerlink" href="#measurement-highlight" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Part of the quantum teleportation diagram with the qubits, gates, and measurement highlighted.</span><a class="headerlink" href="#measurement-highlight" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="a-guessing-game">
 <h2>A guessing game<a class="headerlink" href="#a-guessing-game" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="box">
 <a class="reference internal image-reference" href="../_images/box.png"><img alt="../_images/box.png" src="../_images/box.png" style="width: 278.0px; height: 284.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">A black box: Can you guess how many are pink and how many are grey?</span><a class="headerlink" href="#box" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">A black box: Can you guess how many are pink and how many are grey?</span><a class="headerlink" href="#box" title="Permalink to this image">¶</a></p>
 </div>
 <ul class="simple">
 <li><p>The box has 50 balls colored pink and grey.</p></li>
@@ -259,14 +264,18 @@
 <li><p>Can you make a guess?</p></li>
 </ul>
 <p>We can look a ball out one at a time and see what color it is. If we pick pink the first time, it doesn’t give us an idea about the rest of the balls. However, if we keep picking up more and more balls, we start to get an idea - it could be 25% pink, 75% grey, or 50% pink and 50% grey or 100% pink.</p>
+</div>
+<div class="section" id="qubit-measurement">
+<h2>Qubit Measurement<a class="headerlink" href="#qubit-measurement" title="Permalink to this headline">¶</a></h2>
 <p>Quantum states are very similar. The possiblity of measuring a qubit to be in the state <span class="math notranslate nohighlight">\(|0\rangle\)</span> or <span class="math notranslate nohighlight">\(|1 \rangle\)</span> is based on the values of <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> called the probability amplitudes.
-Given a state <span class="math notranslate nohighlight">\( |\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle \)</span>, the probability of finding the qubit in state  <span class="math notranslate nohighlight">\(|0\rangle\)</span> is <span class="math notranslate nohighlight">\(|\alpha|^2\)</span> and the probability of finding the qubit in state  <span class="math notranslate nohighlight">\(|1\rangle\)</span> is <span class="math notranslate nohighlight">\(|\beta|^2\)</span>.</p>
+Given a state <span class="math notranslate nohighlight">\( |\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle \)</span>, the probability of finding the qubit in state  <span class="math notranslate nohighlight">\(|0\rangle\)</span> is <span class="math notranslate nohighlight">\(|\alpha|^2\)</span> and the probability of finding the qubit in state  <span class="math notranslate nohighlight">\(|1\rangle\)</span> is <span class="math notranslate nohighlight">\(|\beta|^2\)</span>.
+Measuring a qubit destroys the state that it was in resulting in a classical 0 or 1.</p>
 <div class="tip admonition">
-<p class="admonition-title">Exercise 1</p>
+<p class="admonition-title">Exercise: Measurement</p>
 <ol class="simple">
-<li><p>Given a state <span class="math notranslate nohighlight">\( |\psi\rangle~= \frac{1}{\sqrt 2}~|0\rangle+~\frac{1}{\sqrt 2}~|1\rangle \)</span>, what is the probability of finding the qubit in state <span class="math notranslate nohighlight">\(|0\rangle\)</span> ?</p></li>
+<li><p>Given a state <span class="math notranslate nohighlight">\( |\psi\rangle~= \frac{1}{\sqrt 2}~|0\rangle-~\frac{1}{\sqrt 2}~|1\rangle \)</span>, what is the probability of finding the qubit in state <span class="math notranslate nohighlight">\(|0\rangle\)</span> ? Hint: probabilities are always positive and have a value between 0 and 1.</p></li>
 <li><p>Given a state <span class="math notranslate nohighlight">\( |\psi\rangle~= \frac{12}{13}~|0\rangle+~\frac{5}{13}~|1\rangle \)</span>, what is the probability of finding the qubit in state <span class="math notranslate nohighlight">\(|1\rangle\)</span> ?</p></li>
-<li><p>Given a state <span class="math notranslate nohighlight">\(|\psi\rangle~= |1\rangle\)</span>, what is the probability of finding the qubit in state <span class="math notranslate nohighlight">\(|0\rangle~\)</span> ?</p></li>
+<li><p>Given a state <span class="math notranslate nohighlight">\(|\psi\rangle~= -|1\rangle\)</span>, what is the probability of finding the qubit in state <span class="math notranslate nohighlight">\(|0\rangle~\)</span> ?</p></li>
 </ol>
 </div>
 </div>

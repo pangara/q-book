@@ -29,7 +29,7 @@ Since the content was to be designed for an online educational environment, afte
  
 ## Audience
 
-This tutorial is suitable for someone who is between high school and first year university and is curious to get started with quantum computing. Knowledge of quantum mechanics/physics or computer science is not required to understand this tutorial. Some basic linear algebra (matrices, vectors), complex numbers, probability is useful to understand the concepts.  
+This tutorial is suitable for someone who is between high school and first year university and is curious to get started with quantum computing. Knowledge of quantum mechanics/physics or computer science is not required to understand this tutorial. Some basic linear algebra (matrices, vectors), complex numbers, probability is useful to understand the concepts. There are some important concepts that I have skipped over, such as the postulates of quantum computing, eigenvalues and eigenvectors, beginner programming, etc. in the interest of keeping it a bit concise.  
 
 ```{note}
 This repository is based on Scientific Python Quickstart: a short sequence of lectures on Python programming for scientific work, written by [Thomas J.  Sargent](http://www.tomsargent.com/) and [John Stachurski](https://johnstachurski.net/).This uses the new Sphinx-based [Jupyter Book 2.0](https://beta.jupyterbook.org/intro.html) tool set, as part of the [ExecutableBookProject](https://ebp.jupyterbook.org/en/latest/).  

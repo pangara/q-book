@@ -125,7 +125,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="teleportation.html">
-   Teleportation
+   Quantum Teleportation
   </a>
  </li>
  <li class="toctree-l1">
@@ -238,6 +238,16 @@
    Hadamard Gate
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pauli-z-gate">
+   Pauli-Z Gate
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#quantum-circuits">
+   Quantum Circuits
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -306,9 +316,9 @@ As the name suggests, the Pauli-X gate performs a rotation about the X-axis and 
 </div>
 <div class="section" id="hadamard-gate">
 <h2>Hadamard Gate<a class="headerlink" href="#hadamard-gate" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="id1">
+<div class="figure align-default" id="h-gate">
 <a class="reference internal image-reference" href="../_images/hadamard.png"><img alt="../_images/hadamard.png" src="../_images/hadamard.png" style="width: 371.4px; height: 94.8px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">The X gate</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">The Hadamard gate</span><a class="headerlink" href="#h-gate" title="Permalink to this image">¶</a></p>
 </div>
 <p>The Hadamard gate is a famous one, it takes a state (say |0\rangle) into a superposition state. This is also a single qubit gate and is given by:</p>
 <div class="math notranslate nohighlight">
@@ -338,6 +348,49 @@ As the name suggests, the Pauli-X gate performs a rotation about the X-axis and 
 <div class="tip admonition">
 <p class="admonition-title">Exercise 2</p>
 <p>You are given a state <span class="math notranslate nohighlight">\( |\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle \)</span>. What happens to the state when the Hadamard gate is applied to it?</p>
+</div>
+</div>
+<div class="section" id="pauli-z-gate">
+<h2>Pauli-Z Gate<a class="headerlink" href="#pauli-z-gate" title="Permalink to this headline">¶</a></h2>
+<p>The Pauli-Z gate performs a rotation about the Z-axis.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+Z |0\rangle = |0\rangle \\
+Z |1\rangle =- |1\rangle
+\end{split}\]</div>
+<p>The Pauli-Z gate leaves the state <span class="math notranslate nohighlight">\(|0\rangle\)</span> as it is, however, changes the sign of <span class="math notranslate nohighlight">\(|1\rangle\)</span>. The change of sign represents a change in phase of the qubit.</p>
+<p>The Pauli-Z gate represented in the matrix form is given by:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}Z = \begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; -1
+\end{pmatrix}\end{split}\]</div>
+<div class="tip admonition">
+<p class="admonition-title">Exercise</p>
+<p>Given the matrix representation of the Pauli-Z gate, what happens when you apply a Pauli-Z gate to the states <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>? Hint: Start with the vector representations of <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>.</p>
+</div>
+</div>
+<div class="section" id="quantum-circuits">
+<h2>Quantum Circuits<a class="headerlink" href="#quantum-circuits" title="Permalink to this headline">¶</a></h2>
+<p>Quantum circuits represent a a sequence of manipulations that a qubit or multiple qubits go thorugh. The salmon lines you see in the figure are called wires. There can be multiple wires (symbolizing different qubits) in a circuit. Gates are applied from left to right and a measurement is performed at the end. We will leave measurement for the next section. In this section, we will learn how to build a circuit with gates.</p>
+<div class="note admonition">
+<p class="admonition-title">Example: Create a  circuit</p>
+<p>You are given a state <span class="math notranslate nohighlight">\(|0\rangle\)</span>. A Hadamard gate followed by a Pauli-X gate is applied to the qubit. Draw the circuit. What is the final state?</p>
+<div class="figure align-default" id="exercise-gate">
+<a class="reference internal image-reference" href="../_images/exercise-gate.png"><img alt="../_images/exercise-gate.png" src="../_images/exercise-gate.png" style="width: 371.4px; height: 96.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Solution</span><a class="headerlink" href="#exercise-gate" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+
+
+```{admonition} Exercise 3: Create circuits and calculate the final state
+:class: tip
+
+1. You are given a state $|1\rangle$. A Pauli-X gate followed by another Pauli-X gate is applied to the qubit. Draw the circuit. What is the final state? 
+ 
+
+</pre></div>
 </div>
 </div>
 </div>
