@@ -7,7 +7,7 @@ This is my submission for the technical task component of the Xanadu Residency P
 2. explains the quantum teleportation algorithm.
 
 I chose quantum teleportation, because it is one of the core primitives of quantum computing and keeps popping up in popular science articles. 
-This tutorial has been built in the form of an interactive textbook and has been built using [Jupyter Books](https://jupyterbook.org/intro.html). 
+This tutorial has been built in the form of an interactive textbook using [Jupyter Books](https://jupyterbook.org/intro.html). 
 
 ## Learning Outcomes
 By the end of this tutorial, the reader will:
@@ -18,6 +18,7 @@ By the end of this tutorial, the reader will:
 * learn to write short quantum programs using Pennylane
 * understand quantum teleportation mathematically
 * learn how to build the quantum teleportation circuit
+* implement the quantum teleportation circuit on Pennylane
 
 ## Medium
 Since the content was to be designed for an online educational environment, after a lot of contemplation, I thought something in the style of jupyter notebooks would be appropriate because one could share code, text, equations, and visualizations. Jupyter Textbooks seemed appropriate for this because of the following reasons:
@@ -25,8 +26,14 @@ Since the content was to be designed for an online educational environment, afte
 2. They allow addition of LaTeX-style math using MathJax, and bibtex files for references
 3. They are open source (as a part of the [Executable Book Project](https://executablebooks.org/en/latest/))
 4. They have a command line interface to quickly build textbooks
-5. They are easy to deploy with github pages/actions
- 
+5. They are easy to deploy with Github Pages/Actions
+
+### PennyLane
+While Pennylane is certainly suitable mostly for Quantum Machine Learning, I have chosen it as the library of choice for implementing the quantum teleportation algorithm, because 
+1. it is possible to do so,
+2. there are not many resources online on the basic algorithms of quantum computing using Pennylane,  and 
+3. it allows the reader to get a Hello World into PennyLane. 
+  
 ## Audience
 
 This tutorial is suitable for someone who is between high school and first year university and is curious to get started with quantum computing. Knowledge of quantum mechanics/physics or computer science is not required to understand this tutorial. Some basic linear algebra (matrices, vectors), complex numbers, probability is useful to understand the concepts. There are some important concepts that I have skipped over, such as the postulates of quantum computing, eigenvalues and eigenvectors, beginner programming, etc. in the interest of keeping it a bit concise.  

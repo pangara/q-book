@@ -6,7 +6,10 @@
     - file: docs/qubits
     - file: docs/gates
     - file: docs/measurement
+    - file: docs/pennylane1
     - file: docs/multi-qubit
     - file: docs/entanglement
+    - file: docs/pennylane2
     - file: docs/teleportation
+    - file: docs/pennylane3
     - file: docs/bibliography
