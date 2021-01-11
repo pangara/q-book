@@ -1,8 +1,8 @@
-# quantecon-mini-example
+# From Qubits to Quantum Teleportation
+This repository contains all the material for the website 
+https://pangara.github.io/q-book
 
-A short example showing how to write a lecture series using Jupyter Book 2.0.
-
-## Creating an Conda Environment
+## Run the Jupyter Book locally
 
 The conda environment is provided as `environment.yml`. This environment is used for all testing by Github Actions and can be setup by:
 
@@ -35,7 +35,6 @@ jb clean --all mini_book/
 
 This repository is published automatically to `gh-pages` upon `push` to the `master` branch.
 
-## Notes
+## Acknowledgements
 
-This repository is used as a test case for [jupyter-book](https://github.com/executablebooks/jupyter-book) and 
-a `requirements.txt` file is provided to support this `CI` application.
+This Jupyter Book is based on the [quantecon-mini-example](https://github.com/executablebooks/quantecon-mini-example) repository, which is a test case for [jupyter-book](https://github.com/executablebooks/jupyter-book) 
