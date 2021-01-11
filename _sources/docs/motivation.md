@@ -33,7 +33,7 @@ Quantum Teleportation is not only cool, but also has important implications to q
 :scale: 40%
 :name: teleport 
 
-The quantum teleportation circuit
+The quantum teleportation circuit in full. 
 ```
 
 Quantum Teleportation is a technique for transferring quantum information from a source to a destination far away. The quantum teleportation circuit shown in the figure above has many components which we will discuss in detail in the next few sections. I introduce it here is so that you know what to expect from this tutorial. By the end of this tutorial, you will learn all the symbols used here and what they mean in the context of quantum computing.

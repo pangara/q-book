@@ -229,13 +229,18 @@
         
               <div>
                 
-  <div class="section" id="entanglement">
-<span id="id1"></span><h1>Entanglement<a class="headerlink" href="#entanglement" title="Permalink to this headline">¶</a></h1>
-<div class="figure align-default" id="einsten">
-<a class="reference internal image-reference" href="_static/einstein.PNG"><img alt="_static/einstein.PNG" src="_static/einstein.PNG" /></a>
-<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Following Einstein, Podolski and Rosen’s paper, famously called the EPR paper reported something “spooky”, which later came to be lnown as entanglement between two particles.</span><a class="headerlink" href="#einsten" title="Permalink to this image">¶</a></p>
+  <img style="float: right; max-width:300px; max-height:300px;" src="../_static/einstein.png">
+<div class="section" id="id1">
+<h1>Entanglement<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>Following Einstein, Podolski and Rosen’s paper, famously called the EPR paper reported something “spooky”, which later came to be lnown as entanglement between two particles.</p>
+<p>Entanglement is a physical phenomenon that occurs between particles or in our case qubits, such that the quantum state of one of the qubits cannot be desceibed independently of the other. In other words, the state cannot be tensor facotrized. Bell states, named after John Bell, are two qubit entangled states. Entanglement is one of the components that gives quantum computing its power over classical computers.</p>
+<div class="figure align-default" id="entangle-pic">
+<a class="reference internal image-reference" href="../_images/Entaglement.jpg"><img alt="../_images/Entaglement.jpg" src="../_images/Entaglement.jpg" style="width: 600.0px; height: 340.8px;" /></a>
 </div>
-<p>Entanglement is a physical phenomenon that occurs between particles or in our case qubits, such that the quantum state of one of the qubits cannot be desceibed independently of the other. In other words, the state cannot be tensor facotrized. Bell states, named after John Bell, are two qubit entangled states.</p>
+<div class="figure align-default" id="entangle-highlight">
+<a class="reference internal image-reference" href="../_images/entangle-highlight.png"><img alt="../_images/entangle-highlight.png" src="../_images/entangle-highlight.png" style="width: 788.0px; height: 394.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">We will focus on this particular part of the circuit that makes a bell pair.</span><a class="headerlink" href="#entangle-highlight" title="Permalink to this image">¶</a></p>
+</div>
 <div class="section" id="how-to-create-a-bell-state-pair">
 <h2>How to create a Bell State/Pair<a class="headerlink" href="#how-to-create-a-bell-state-pair" title="Permalink to this headline">¶</a></h2>
 <p>By combining the Hadamard gate and the CNOT gate, one can create an entangled state. The process is as follows:</p>
@@ -246,14 +251,23 @@
 </ol>
 <div class="figure align-default" id="entangle">
 <a class="reference internal image-reference" href="../_images/entangle.PNG"><img alt="../_images/entangle.PNG" src="../_images/entangle.PNG" style="width: 732.4000000000001px; height: 340.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Creation of a Bell Pair</span><a class="headerlink" href="#entangle" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Creation of a Bell Pair</span><a class="headerlink" href="#entangle" title="Permalink to this image">¶</a></p>
 </div>
 <p>Let’s understand how the math works out.</p>
 <div class="math notranslate nohighlight">
 \[
 CNOT(H(|00&gt;)) \rightarrow CNOT(\frac{|00&gt; + |10&gt;}{\sqrt2}) \rightarrow \frac{|00&gt; + |11&gt;}{\sqrt2} 
 \]</div>
-<p>The state <span class="math notranslate nohighlight">\(\frac{|00&gt; + |11&gt;}{\sqrt2}\)</span> is called a Bell state. It cannot be tensor factorized. What this means is that we cannot split this state into a form line <span class="math notranslate nohighlight">\(|u\rangle \otimes |v\rangle\)</span>.</p>
+<p>The state <span class="math notranslate nohighlight">\(\frac{|00&gt; + |11&gt;}{\sqrt2}\)</span> is called a Bell state. It cannot be tensor factorized. What this means is that we cannot split this state into a form like <span class="math notranslate nohighlight">\(|u\rangle \otimes |v\rangle\)</span>.</p>
+<div class="tip admonition">
+<p class="admonition-title">Exercise: Creating Bell States</p>
+<p>The Bell state created above, <span class="math notranslate nohighlight">\(\frac{|00&gt; + |11&gt;}{\sqrt2}\)</span>, is creating by starting out with both qubits in the state <span class="math notranslate nohighlight">\(|00\rangle\)</span>. What are the states that get created when you start with the following states</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(|01\rangle\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|10\rangle\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(|11\rangle\)</span></p></li>
+</ul>
+</div>
 </div>
 </div>
 

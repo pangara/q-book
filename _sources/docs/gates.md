@@ -95,9 +95,14 @@ X |0\rangle = \begin{pmatrix}
 
 $$
 
-### Exercise 
+
+```{admonition} Exercise 1
+:class: tip
 
 You are given a state $ |\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle $. What happens to the state when the Pauli-X gate is applied to it? 
+
+```
+
 
 ## Hadamard Gate
 
@@ -146,9 +151,12 @@ $$
 \end{pmatrix} = \frac{|0>-|1>}{\sqrt2} 
 $$
 
-### Exercise 
-
-You are given a state $ |\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle $. What happens to the state when the Hadamard gate is applied to it? 
 
 
 
+
+```{admonition} Exercise 2
+:class: tip
+
+You are given a state $ |\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle $. What happens to the state when the Hadamard gate is applied to it?  
+```

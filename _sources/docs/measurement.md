@@ -17,6 +17,13 @@ We now move from the quantum realm, to the classical realm. A measurement is ess
 
 For now, we will think of measurement as a probability and stick to the computational basis. 
 
+```{figure} /_static/measurement-highlight.png
+:scale: 40%
+:name: measurement-highlight 
+
+Part of the quantum teleportation diagram with the qubits, gates, and measurement highlighted.
+```
+
 ## A guessing game
 
 ```{figure} /_static/box.png
@@ -38,9 +45,13 @@ We can look a ball out one at a time and see what color it is. If we pick pink t
 Quantum states are very similar. The possiblity of measuring a qubit to be in the state $|0\rangle$ or $|1 \rangle$ is based on the values of $\alpha$ and $\beta$ called the probability amplitudes. 
 Given a state $ |\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle $, the probability of finding the qubit in state  $|0\rangle$ is $|\alpha|^2$ and the probability of finding the qubit in state  $|1\rangle$ is $|\beta|^2$.
 
-### Exercise
+
+```{admonition} Exercise 1
+:class: tip
+
 1. Given a state $ |\psi\rangle~= \frac{1}{\sqrt 2}~|0\rangle+~\frac{1}{\sqrt 2}~|1\rangle $, what is the probability of finding the qubit in state $|0\rangle$ ? 
 
 2. Given a state $ |\psi\rangle~= \frac{12}{13}~|0\rangle+~\frac{5}{13}~|1\rangle $, what is the probability of finding the qubit in state $|1\rangle$ ? 
 
 3. Given a state $|\psi\rangle~= |1\rangle$, what is the probability of finding the qubit in state $|0\rangle~$ ? 
+```

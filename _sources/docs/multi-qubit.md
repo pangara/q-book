@@ -14,6 +14,13 @@ kernelspec:
 # Multiple Qubit Systems and Gates
 A qubit as we know is a single unit of quantum computation, and is represented by a vector with  $ |0\rangle = \begin{pmatrix} 1\\ 0 \end{pmatrix}$ and $|1\rangle = \begin{pmatrix} 0\\ 1 \end{pmatrix}$. As the number of qubits increases, we have to take into account a combined system of qubits. Qubits combine via tensor products. 
 
+```{figure} /_static/multi-qubit-highlight.png
+:scale: 40%
+:name: multi-qubit-highlight 
+
+Part of the quantum teleportation diagram with the qubits, single qubit gates, two-qubit gates, and measurement highlighted.
+```
+
 ## Tensor Products
 Tensor products are different from regular  matrix multiplication, such that the resulting matrix has a higher dimension than the matrices we started out with. Tensor products work by multiplying every element of one matrix with every other element of the other matrix.
 
@@ -32,7 +39,9 @@ $$
 |0\rangle \otimes |0\rangle = \begin{bmatrix}1 \\0\end{bmatrix} \otimes \begin{bmatrix}1 \\0\end{bmatrix} = \begin{bmatrix}1\begin{bmatrix}1 \\0\end{bmatrix} \\0\begin{bmatrix}1 \\0\end{bmatrix}\end{bmatrix} = \begin{bmatrix}1 \\0 \\ 0 \\ 0 \end{bmatrix}
 $$
 
-### Exercise
+```{admonition} Exercise 1
+:class: tip
+
 Given that we have two single qubit quantum systems with the following states, lets combine them via a tensor product. 
 
 $$
@@ -42,7 +51,11 @@ $$
 
 $$
 
-#### Solution
+```
+
+```{admonition} Solution to Exercise 1
+:class: tip
+
 $$
 |\psi> \otimes |\phi> = (\alpha_1|0> + \beta_1|1>) \otimes (\alpha_2|0> + \beta_2|1>) 
 $$
@@ -99,6 +112,9 @@ $$
 |\psi \phi> = \alpha |00> + \beta|01> + \gamma |10> + \delta |11>
 $$
 
+
+```
+
 ## States in a two qubit system
 When we have two quantum states in the same systems, the qubit can be in one to all of the following states $|00\rangle$, $|01\rangle$, $|10\rangle$, $|11\rangle$.
 
@@ -151,7 +167,11 @@ $$
 CNOT|\psi\rangle~=  \alpha~|00\rangle+~\beta~|01\rangle+~\gamma~|11\rangle+~\delta~|10\rangle
 $$
 
-### Exercise
+
+
+
+```{admonition} Exercise 2
+:class: tip
 
 Given the matrix representation of the CNOT gate, verify that:
 
@@ -159,3 +179,4 @@ $$
 CNOT|\psi\rangle~=  \alpha~|00\rangle+~\beta~|01\rangle+~\gamma~|11\rangle+~\delta~|10\rangle
 $$
 
+```

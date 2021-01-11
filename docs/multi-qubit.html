@@ -222,20 +222,6 @@
   <a class="reference internal nav-link" href="#combining-qubits">
    Combining qubits
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise">
-     Exercise
-    </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#solution">
-       Solution
-      </a>
-     </li>
-    </ul>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#states-in-a-two-qubit-system">
@@ -246,13 +232,6 @@
   <a class="reference internal nav-link" href="#cnot-gate">
    CNOT Gate
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Exercise
-    </a>
-   </li>
-  </ul>
  </li>
 </ul>
 
@@ -268,6 +247,10 @@
   <div class="section" id="multiple-qubit-systems-and-gates">
 <span id="multi-qubit"></span><h1>Multiple Qubit Systems and Gates<a class="headerlink" href="#multiple-qubit-systems-and-gates" title="Permalink to this headline">¶</a></h1>
 <p>A qubit as we know is a single unit of quantum computation, and is represented by a vector with  <span class="math notranslate nohighlight">\( |0\rangle = \begin{pmatrix} 1\\ 0 \end{pmatrix}\)</span> and <span class="math notranslate nohighlight">\(|1\rangle = \begin{pmatrix} 0\\ 1 \end{pmatrix}\)</span>. As the number of qubits increases, we have to take into account a combined system of qubits. Qubits combine via tensor products.</p>
+<div class="figure align-default" id="multi-qubit-highlight">
+<a class="reference internal image-reference" href="../_images/multi-qubit-highlight.png"><img alt="../_images/multi-qubit-highlight.png" src="../_images/multi-qubit-highlight.png" style="width: 788.0px; height: 394.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Part of the quantum teleportation diagram with the qubits, single qubit gates, two-qubit gates, and measurement highlighted.</span><a class="headerlink" href="#multi-qubit-highlight" title="Permalink to this image">¶</a></p>
+</div>
 <div class="section" id="tensor-products">
 <h2>Tensor Products<a class="headerlink" href="#tensor-products" title="Permalink to this headline">¶</a></h2>
 <p>Tensor products are different from regular  matrix multiplication, such that the resulting matrix has a higher dimension than the matrices we started out with. Tensor products work by multiplying every element of one matrix with every other element of the other matrix.</p>
@@ -278,14 +261,15 @@
 <div class="math notranslate nohighlight">
 \[\begin{split}|0\rangle \otimes |0\rangle = \begin{bmatrix}1 \\0\end{bmatrix} \otimes \begin{bmatrix}1 \\0\end{bmatrix} = \begin{bmatrix}1\begin{bmatrix}1 \\0\end{bmatrix} \\0\begin{bmatrix}1 \\0\end{bmatrix}\end{bmatrix} = \begin{bmatrix}1 \\0 \\ 0 \\ 0 \end{bmatrix}
 \end{split}\]</div>
-<div class="section" id="exercise">
-<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 1</p>
 <p>Given that we have two single qubit quantum systems with the following states, lets combine them via a tensor product.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}|\psi&gt; = \alpha_1|0&gt; + \beta_1|1&gt; \\
 |\phi&gt; = \alpha_2|0&gt; + \beta_2|1&gt;\end{split}\]</div>
-<div class="section" id="solution">
-<h4>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Solution to Exercise 1</p>
 <div class="math notranslate nohighlight">
 \[
 |\psi&gt; \otimes |\phi&gt; = (\alpha_1|0&gt; + \beta_1|1&gt;) \otimes (\alpha_2|0&gt; + \beta_2|1&gt;) 
@@ -334,7 +318,6 @@
 \]</div>
 </div>
 </div>
-</div>
 <div class="section" id="states-in-a-two-qubit-system">
 <h2>States in a two qubit system<a class="headerlink" href="#states-in-a-two-qubit-system" title="Permalink to this headline">¶</a></h2>
 <p>When we have two quantum states in the same systems, the qubit can be in one to all of the following states <span class="math notranslate nohighlight">\(|00\rangle\)</span>, <span class="math notranslate nohighlight">\(|01\rangle\)</span>, <span class="math notranslate nohighlight">\(|10\rangle\)</span>, <span class="math notranslate nohighlight">\(|11\rangle\)</span>.</p>
@@ -347,7 +330,7 @@
 <h2>CNOT Gate<a class="headerlink" href="#cnot-gate" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="x-gate">
 <a class="reference internal image-reference" href="../_images/cnot.png"><img alt="../_images/cnot.png" src="../_images/cnot.png" style="width: 316.2px; height: 169.79999999999998px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">The CNOT gate</span><a class="headerlink" href="#x-gate" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">The CNOT gate</span><a class="headerlink" href="#x-gate" title="Permalink to this image">¶</a></p>
 </div>
 <p>Now that we know how to create a two-qubit system, we can work woth a two qubit gate. For this tutorial, we will go over the CNOT gate.
 The CNOT gate is given by the matrix:</p>
@@ -371,8 +354,8 @@ Suppose we are given a state <span class="math notranslate nohighlight">\(|11\ra
 \[
 CNOT|\psi\rangle~=  \alpha~|00\rangle+~\beta~|01\rangle+~\gamma~|11\rangle+~\delta~|10\rangle
 \]</div>
-<div class="section" id="id1">
-<h3>Exercise<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 2</p>
 <p>Given the matrix representation of the CNOT gate, verify that:</p>
 <div class="math notranslate nohighlight">
 \[

@@ -222,6 +222,11 @@
    Solution
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-step-by-step-explanation">
+   A step-by-step explanation
+  </a>
+ </li>
 </ul>
 
         </nav>
@@ -235,24 +240,27 @@
                 
   <div class="section" id="teleportation">
 <span id="id1"></span><h1>Teleportation<a class="headerlink" href="#teleportation" title="Permalink to this headline">¶</a></h1>
-<p>The concepts of superposition and entanglement are what give quantum computing its power over classical computers. We have heard about teleportation, a miraculous form of transportation from one place to another. Quantum Teleportation has a slightly different meaning, it enables quantum states to be transported across long distances without a need to send it directly. <span class="bibtex" id="id2">[bennett1993teleporting]</span></p>
+<p>We are now ready to understand how the teleportation circuit works. From our section on motivation, we understand that teleportation is a process of sending quantum information. Sounds simple enough, but we have a problem called the <strong>no-cloning theorem</strong>. The no-cloning theorem is a result of quantum mechanics which forbids the creation of identical copies of an arbitrary unknown quantum state.</p>
 <div class="section" id="problem-statement">
 <h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Alice has to send a qubit to Bob.</p></li>
 <li><p>Alice and Bob have a pre-shared Bell State</p></li>
 <li><p>Alice can send only classical information to Bob</p></li>
-<li><p>lice doesn’t know the state of the qubit, even if she does, describing it would take infinite amount of classical information since qubits take value in a continuous space.</p></li>
+<li><p>Alice doesn’t know the state of the qubit, even if she does, describing it would take infinite amount of classical information since qubits take value in a continuous space.</p></li>
 </ul>
 </div>
 <div class="section" id="solution">
 <h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li><p>Alice interacts <span class="math notranslate nohighlight">\(\psi\)</span> with her half of the EPR pair, and then makes a measurement (Bell basis measurement)</p></li>
+<li><p>Alice interacts <span class="math notranslate nohighlight">\(|\psi\rangle\)</span> with her half of the Bell pair, and then makes a measurement (Bell basis measurement)</p></li>
 <li><p>She obtains one of four classical results 00, 01, 10 or 11 and sends this information to Bob</p></li>
 <li><p>Depending on Alice’s classical message, Bob performs one of four operations on his half of the EPR pair</p></li>
-<li><p>This recovers the state <span class="math notranslate nohighlight">\(\psi\)</span>!</p></li>
+<li><p>This recovers the state <span class="math notranslate nohighlight">\(|\psi\rangle\)</span>!</p></li>
 </ul>
+</div>
+<div class="section" id="a-step-by-step-explanation">
+<h2>A step-by-step explanation<a class="headerlink" href="#a-step-by-step-explanation" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 

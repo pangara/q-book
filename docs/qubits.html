@@ -249,18 +249,6 @@
   <a class="reference internal nav-link" href="#converting-between-bras-and-kets">
    Converting between Bras and Kets
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-1">
-     Exercise 1
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-2">
-     Exercise 2
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#qubits-in-the-dirac-notation">
@@ -271,13 +259,6 @@
   <a class="reference internal nav-link" href="#a-quantum-state">
    A quantum state
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#exercise-3">
-     Exercise 3
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#superposition">
@@ -364,8 +345,8 @@ Perform a complex conjugate again,
 <div class="section" id="converting-between-bras-and-kets">
 <h2>Converting between Bras and Kets<a class="headerlink" href="#converting-between-bras-and-kets" title="Permalink to this headline">¶</a></h2>
 <p>Now that we understand how complex conjugates and transposes work, lets do some exercises converting between bras and kets.</p>
-<div class="section" id="exercise-1">
-<h3>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 1</p>
 <p>Convert the following bras into kets.</p>
 <div class="math notranslate nohighlight">
 \[ 
@@ -384,8 +365,8 @@ Perform a complex conjugate again,
          \end{bmatrix} 
 \]</div>
 </div>
-<div class="section" id="exercise-2">
-<h3>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 2</p>
 <p>Convert the following kets into bras.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split} 
@@ -459,8 +440,8 @@ It’s important to remember here that 0 is very much different from <span class
 <p class="admonition-title">Note</p>
 <p>You must also wonder about the angles on the bloch sphere <span class="math notranslate nohighlight">\( \phi \)</span> and <span class="math notranslate nohighlight">\( \theta \)</span>. You can use these angles to represent the state <span class="math notranslate nohighlight">\( |\psi\rangle \)</span> as <span class="math notranslate nohighlight">\( |\psi\rangle = cos \frac{\theta}{2}|0\rangle +  e^{i\phi}sin \frac{\theta}{2}|1\rangle \)</span>. This is important, but we will not discuss this in the scope of this tutorial</p>
 </div>
-<div class="section" id="exercise-3">
-<h3>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this headline">¶</a></h3>
+<div class="tip admonition">
+<p class="admonition-title">Exercise 3</p>
 <p>Verify whether the following are valid quantum states or not.</p>
 <ol class="simple">
 <li><p><span class="math notranslate nohighlight">\( |\psi&gt;~= \frac{1}{4}|0&gt;+~\frac{3}{4}|1&gt; \)</span></p></li>
@@ -472,7 +453,8 @@ It’s important to remember here that 0 is very much different from <span class
 <div class="section" id="superposition">
 <h2>Superposition<a class="headerlink" href="#superposition" title="Permalink to this headline">¶</a></h2>
 <p>Superposition is defined as a combination of the states of <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>, therefore <span class="math notranslate nohighlight">\(|\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle\)</span> is a superposition state.
-The state we look at before <span class="math notranslate nohighlight">\( |\psi&gt;~= \frac{1}{\sqrt 2}|0&gt;+~\frac{1}{\sqrt 2}|1&gt;  \)</span> is also a superposition state. Moreover, since the value of <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are the same, we can say that the state is in an equal superposition of <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>. In classical computing we are always manipulating zeros and ones to get what we want. You must wonder how we get from one state to another quantumly because at the end of the day, we want to perform a computation quantumly! This is where gates come in, and are the topic of discussion in the next section.</p>
+The state we look at before <span class="math notranslate nohighlight">\( |\psi&gt;~= \frac{1}{\sqrt 2}|0&gt;+~\frac{1}{\sqrt 2}|1&gt;  \)</span> is also a superposition state. Moreover, since the value of <span class="math notranslate nohighlight">\(\alpha\)</span> and <span class="math notranslate nohighlight">\(\beta\)</span> are the same, we can say that the state is in an equal superposition of <span class="math notranslate nohighlight">\(|0\rangle\)</span> and <span class="math notranslate nohighlight">\(|1\rangle\)</span>. In classical computing we are always manipulating zeros and ones to get what we want. You must wonder how we get from one state to another quantumly because at the end of the day, we want to perform a computation quantumly! This is where gates come in, and are the topic of discussion in the next section.
+<img alt="Superposition" src="https://www.nist.gov/sites/default/files/images/2019/12/04/superposition.gif" /></p>
 </div>
 <div class="section" id="code-example">
 <h2>Code Example<a class="headerlink" href="#code-example" title="Permalink to this headline">¶</a></h2>
