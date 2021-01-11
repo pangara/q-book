@@ -195,21 +195,19 @@ Quantum circuits represent a sequence of manipulations that a qubit or multiple 
 :class: tip
 
 You are given a state $|0\rangle$. A Hadamard gate followed by a Pauli-X gate is applied to the qubit. Draw the circuit. What is the final state? 
+```
 
 ```{figure} /_static/exercise-gate .png
 :scale: 30%
 :name: exercise-gate 
 Solution
 ```
-
-```
-
+    
 
 
 ```{admonition} Exercise 3: Create circuits and calculate the final state
 :class: tip
 
 1. You are given a state $|1\rangle$. A Pauli-X gate followed by another Pauli-X gate is applied to the qubit. Draw the circuit. What is the final state? 
- 
 
 ```

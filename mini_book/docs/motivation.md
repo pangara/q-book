@@ -26,7 +26,7 @@ In this tutorial, we won't discuss this kind of teleportation but we will discus
 
 In 1993, Bennett et al.,{cite}`bennett1993teleporting` showed that quantum teleportation was actually possible using the rules of quantum mechanics, and has since been followed by [experiments that demonstrate quantum teleportation](https://news.fnal.gov/2020/12/fermilab-and-partners-achieve-sustained-high-fidelity-quantum-teleportation/).
 
-Quantum Teleportation is not only cool, but also has important implications to quantum computing, quantum communication, and also interestingly to quantum hardware too~{cite}`Pirandola_2015`. 
+Quantum Teleportation is not only cool, but also has important implications to quantum computing, quantum communication, and also interestingly to quantum hardware too {cite}`Pirandola_2015`. 
 
 ## Quantum Teleportation
 ```{figure} /_static/teleport.png
