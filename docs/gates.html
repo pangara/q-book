@@ -56,7 +56,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Multiple Qubit Systems and Gates" href="multi-qubit.html" />
+    <link rel="next" title="Measurement" href="measurement.html" />
     <link rel="prev" title="Basics" href="qubits.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -94,6 +94,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="motivation.html">
+   Motivation
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="qubits.html">
    Basics
   </a>
@@ -101,6 +106,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Single Qubit Gates
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="measurement.html">
+   Measurement
   </a>
  </li>
  <li class="toctree-l1">
@@ -114,13 +124,13 @@
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="measurement.html">
-   Measurement
+  <a class="reference internal" href="teleportation.html">
+   Teleportation
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="teleportation.html">
-   Teleportation
+  <a class="reference internal" href="bibliography.html">
+   Bibliography
   </a>
  </li>
 </ul>
@@ -243,12 +253,12 @@
 <span id="gates"></span><h1>Single Qubit Gates<a class="headerlink" href="#single-qubit-gates" title="Permalink to this headline">¶</a></h1>
 <div class="figure align-default" id="gates-highlight">
 <a class="reference internal image-reference" href="../_images/gates-highlight.png"><img alt="../_images/gates-highlight.png" src="../_images/gates-highlight.png" style="width: 788.0px; height: 394.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Part of the quantum teleportation diagram with the qubits and gates highlighted.</span><a class="headerlink" href="#gates-highlight" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Part of the quantum teleportation diagram with the qubits and gates highlighted.</span><a class="headerlink" href="#gates-highlight" title="Permalink to this image">¶</a></p>
 </div>
 <p>The boxes in yellow represent gates. We use gates to get from one state to another in the quantum universe. You can think of gates as small microwave pulses that transform the qubit and allow it to go from one state (say <span class="math notranslate nohighlight">\( |0\rangle \)</span>) to another state (say (say <span class="math notranslate nohighlight">\( |1\rangle \)</span>).</p>
 <div class="figure align-default" id="gate">
 <a class="reference internal image-reference" href="../_images/gate.jpg"><img alt="../_images/gate.jpg" src="../_images/gate.jpg" style="width: 480.0px; height: 270.0px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">A quantum gate</span><a class="headerlink" href="#gate" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">A quantum gate</span><a class="headerlink" href="#gate" title="Permalink to this image">¶</a></p>
 </div>
 <p>We will go over a few important single qubit gates for quantum teleportation. These are the Pauli X gate and the the Hadamard Gate.
 Unlike states which are vectors, gates are matrices, specifically these are unitary matrices. All this means is that a matrix multiplied by its conjugate transpose gives us the identity matrix.
@@ -263,7 +273,7 @@ The reason why we choose unitary matrices are because they preserve the length o
 <h2>Identity Gate<a class="headerlink" href="#identity-gate" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="wire">
 <a class="reference internal image-reference" href="../_images/wire.png"><img alt="../_images/wire.png" src="../_images/wire.png" style="width: 328.2px; height: 38.1px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">The Identity gate</span><a class="headerlink" href="#wire" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">The Identity gate</span><a class="headerlink" href="#wire" title="Permalink to this image">¶</a></p>
 </div>
 <p>The simplest gate is the identity gate, which doesn’t change the qubit. It is represented by the Identity matrix. While this might seem trivial, qubits are very fragile and its not quite easy to keep the qubit in its given state.</p>
 </div>
@@ -271,7 +281,7 @@ The reason why we choose unitary matrices are because they preserve the length o
 <h2>Pauli-X Gate<a class="headerlink" href="#pauli-x-gate" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="x-gate">
 <a class="reference internal image-reference" href="../_images/x-gate.PNG"><img alt="../_images/x-gate.PNG" src="../_images/x-gate.PNG" style="width: 331.5px; height: 94.8px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">The X gate</span><a class="headerlink" href="#x-gate" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">The X gate</span><a class="headerlink" href="#x-gate" title="Permalink to this image">¶</a></p>
 </div>
 <p>Pauli gates are single qubit gates, i.e, they act on a single qubit. These represent rotations around the X, Y and Z axes. We will discuss only the Pauli-X gate here.
 As the name suggests, the Pauli-X gate performs a rotation about the X-axis and is equivalent to the NOT gate in classical computing. In matrix representation, it is given by:</p>
@@ -298,7 +308,7 @@ As the name suggests, the Pauli-X gate performs a rotation about the X-axis and 
 <h2>Hadamard Gate<a class="headerlink" href="#hadamard-gate" title="Permalink to this headline">¶</a></h2>
 <div class="figure align-default" id="id1">
 <a class="reference internal image-reference" href="../_images/hadamard.png"><img alt="../_images/hadamard.png" src="../_images/hadamard.png" style="width: 371.4px; height: 94.8px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">The X gate</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">The X gate</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
 <p>The Hadamard gate is a famous one, it takes a state (say |0\rangle) into a superposition state. This is also a single qubit gate and is given by:</p>
 <div class="math notranslate nohighlight">
@@ -361,7 +371,7 @@ As the name suggests, the Pauli-X gate performs a rotation about the X-axis and 
     <div class='prev-next-bottom'>
         
     <a class='left-prev' id="prev-link" href="qubits.html" title="previous page">Basics</a>
-    <a class='right-next' id="next-link" href="multi-qubit.html" title="next page">Multiple Qubit Systems and Gates</a>
+    <a class='right-next' id="next-link" href="measurement.html" title="next page">Measurement</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">
