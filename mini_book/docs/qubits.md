@@ -18,6 +18,7 @@ launch_buttons:
 # Basics
 
 In this section, we will go over what qubits are, how qubits are represented, and the dirac notation.
+
 ## Qubits
 
 
@@ -86,7 +87,8 @@ A description of dot products will go here if required.
 ## Converting between Bras and Kets
 Now that we understand how complex conjugates and transposes work, lets do some exercises converting between bras and kets. 
 
-### Exercise 1
+```{admonition} Exercise 1
+:class: tip
 Convert the following bras into kets.
 
 $$ 
@@ -104,8 +106,10 @@ $$
            1
          \end{bmatrix} 
 $$
+```
 
-### Exercise 2
+```{admonition} Exercise 2
+:class: tip
 Convert the following kets into bras.
 
 $$ 
@@ -122,7 +126,7 @@ $$
          \end{bmatrix} 
          
 $$
-
+```
 ## Qubits in the Dirac notation
 
 
@@ -211,7 +215,10 @@ $$
 You must also wonder about the angles on the bloch sphere $ \phi $ and $ \theta $. You can use these angles to represent the state $ |\psi\rangle $ as $ |\psi\rangle = cos \frac{\theta}{2}|0\rangle +  e^{i\phi}sin \frac{\theta}{2}|1\rangle $. This is important, but we will not discuss this in the scope of this tutorial
 
 ```
-### Exercise 3
+
+
+```{admonition} Exercise 3
+:class: tip
 Verify whether the following are valid quantum states or not. 
 
 2. $ |\psi>~= \frac{1}{4}|0>+~\frac{3}{4}|1> $
@@ -219,6 +226,7 @@ Verify whether the following are valid quantum states or not.
 3. $|\psi>~= \frac{12}{13}|0>+~\frac{5}{13}|1>$
 
 4. $|\psi>~= \frac{4}{5}|0>+~\frac{2}{5}|1> $
+```
 
 
 
@@ -226,6 +234,8 @@ Verify whether the following are valid quantum states or not.
 
 Superposition is defined as a combination of the states of $|0\rangle$ and $|1\rangle$, therefore $|\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle$ is a superposition state. 
 The state we look at before $ |\psi>~= \frac{1}{\sqrt 2}|0>+~\frac{1}{\sqrt 2}|1>  $ is also a superposition state. Moreover, since the value of $\alpha$ and $\beta$ are the same, we can say that the state is in an equal superposition of $|0\rangle$ and $|1\rangle$. In classical computing we are always manipulating zeros and ones to get what we want. You must wonder how we get from one state to another quantumly because at the end of the day, we want to perform a computation quantumly! This is where gates come in, and are the topic of discussion in the next section.
+![Superposition](https://www.nist.gov/sites/default/files/images/2019/12/04/superposition.gif)
+
 
 ## Code Example
 ```{code-cell} ipython3
