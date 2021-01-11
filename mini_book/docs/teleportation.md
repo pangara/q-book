@@ -20,7 +20,7 @@ We are now ready to understand how the teleportation circuit works. From our sec
 * Alice has to send a qubit to Bob. 
 * Alice and Bob have a pre-shared Bell State
 * Alice can send only classical information to Bob
-* Alice doesn’t know the state of the qubit, even if she does, describing it would take infinite amount of classical information since qubits take value in a continuous space. 
+* Alice doesn’t know the state of the qubit, even if she does, describing it would take an infinite amount of classical information since qubits take value in a continuous space. 
 
 ## Solution
 * Alice interacts $|\psi\rangle$ with her half of the Bell pair, and then makes a measurement (Bell basis measurement)
@@ -38,7 +38,7 @@ The quantum teleportation circuit
 Given Alice's qubit $|q_0\rangle$, we wish to transfer this state to Bob's $|q_2\rangle$. 
 
 ### Prepare the Bell Pair
-First a third party, Eve, creates an entangled pair and gives one of the qubits in this pair to Alice and the other qubit in this entangled pair to Bob. 
+First, a third party, Eve, creates an entangled pair and gives one of the qubits in this pair to Alice and the other qubit in this entangled pair to Bob. 
 Let's refer back to our diagram from the section on entanglement.
 ```{figure} /_static/entangle-t.png
 :scale: 40%
@@ -83,7 +83,7 @@ $|\psi_2\rangle$ before measurement
 
 ```
 
-We can see from the figure and the equation that there are 4 possibilities for $|q_0\rangle$ and $|q_1\rangle$.  From the circuit diagram we see that there there are two more gates after measurement, the Controlled-NOT and Controlled-Z gate, that are applied onto Bob's $|q_2\rangle$. Note that $|q_0\rangle$ and $|q_1\rangle$ get destroyed upon measurement giving us two classical bits $c_1$ and $c_2$.
+We can see from the figure and the equation that there are 4 possibilities for $|q_0\rangle$ and $|q_1\rangle$.  From the circuit diagram, we see that there there are two more gates after measurement, the Controlled-NOT and Controlled-Z gate, that is applied onto Bob's $|q_2\rangle$. Note that $|q_0\rangle$ and $|q_1\rangle$ get destroyed upon measurement giving us two classical bits $c_1$ and $c_2$.
 
 The controlled gates at the end are there to apply the corresponding (NOT/X and Z) gates only if either or both of $|q_0\rangle$ and $|q_1\rangle$ are 1 resulting in the following table. Note that X and NOT are used here interchangeably. 
 

@@ -17,7 +17,7 @@ launch_buttons:
 
 # Basics
 
-In this section, we will go over what qubits are, how qubits are represented, and the dirac notation.
+In this section, we will go over what qubits are, how qubits are represented, and the Dirac notation.
 
 ## Qubits
 
@@ -30,7 +30,7 @@ Part of the quantum teleportation diagram with the qubits highlighted.
 ```
 
 In this section, we discuss what the symbols $|q_0\rangle$, or $|0\rangle$ mean. These are called qubits. A qubit or a quantum bit is a unit of quantum information. Unlike a classical bit which can be 0 or 1, quantum mechanics allows qubits to be in a superposition of both states 0 and 1. We will learn more about superposition soon, but it can be thought of as a combination of 0 and 1. 
-A bloch sphere shows us one representation of a qubit and is shown in the figure below.
+A Bloch sphere shows us one representation of a qubit and is shown in the figure below.
 
 ```{figure} /_static/bloch.png
 :scale: 50%
@@ -39,11 +39,11 @@ A bloch sphere shows us one representation of a qubit and is shown in the figure
 Bloch Sphere
 ```
 
-You can see that the 0 and 1 are wrapped in a pipe/angle bracket notation - this is the dirac notation. 
+You can see that the 0 and 1 are wrapped in a pipe/angle bracket notation - this is the Dirac notation. 
 
 ## Dirac Notation
 
-The Dirac Notation, also called the Braket notation is a simple way of representing vectors.
+The Dirac Notation also called the Braket notation is a simple way of representing vectors.
 
 A column vector is called a ket and is represented in the following way: 
 $|a\rangle = \begin{bmatrix}
@@ -85,7 +85,7 @@ Here is its transpose: $ c = \begin{bmatrix}
 A description of dot products will go here if required.
 
 ## Converting between Bras and Kets
-Now that we understand how complex conjugates and transposes work, lets do some exercises converting between bras and kets. 
+Now that we understand how complex conjugates and transposes work, let's do some exercises converting between bras and kets. 
 
 ```{admonition} Exercise 1
 :class: tip
@@ -130,7 +130,7 @@ $$
 ## Qubits in the Dirac notation
 
 
-Let's take a look at the Bloch spehere again.
+Let's take a look at the Bloch sphere again.
 
 The north and south poles are given by $|0\rangle$ and $|1\rangle$. We now know what the symbols mean - $|0\rangle$ and $|1\rangle$ are vectors! 
 It's important to remember here that 0 is very much different from $|0\rangle$ and 1 is very much different from $|1\rangle$.
@@ -156,7 +156,7 @@ $$
  
 ## A quantum state
 
-The bloch sphere does not only represent the states $|0\rangle$ and $|1\rangle$, but can also represent a variety of states on the sphere. Think of the bloch sphere as a balloon. Every point on the balloon is a valid quantum state and is a combination of $|0\rangle$ and $|1\rangle$. We can write down an arbitrary state $|\psi\rangle$ as follows:
+The Bloch sphere does not only represent the states $|0\rangle$ and $|1\rangle$, but can also represent a variety of states on the sphere. Think of the Bloch sphere as a balloon. Every point on the balloon is a valid quantum state and is a combination of $|0\rangle$ and $|1\rangle$. We can write down an arbitrary state $|\psi\rangle$ as follows:
 
 $$
 
@@ -172,7 +172,7 @@ $$
 
 $$
 
-In vector notation we can write this as:
+In vector notation, we can write this as:
 
 $$
 
@@ -233,23 +233,8 @@ Verify whether the following are valid quantum states or not.
 ## Superposition
 
 Superposition is defined as a combination of the states of $|0\rangle$ and $|1\rangle$, therefore $|\psi\rangle~= \alpha~|0\rangle+~\beta~|1\rangle$ is a superposition state. 
-The state we look at before $ |\psi>~= \frac{1}{\sqrt 2}|0>+~\frac{1}{\sqrt 2}|1>  $ is also a superposition state. Moreover, since the value of $\alpha$ and $\beta$ are the same, we can say that the state is in an equal superposition of $|0\rangle$ and $|1\rangle$. In classical computing we are always manipulating zeros and ones to get what we want. You must wonder how we get from one state to another quantumly because at the end of the day, we want to perform a computation quantumly! This is where gates come in, and are the topic of discussion in the next section.
+The state we look at before $ |\psi>~= \frac{1}{\sqrt 2}|0>+~\frac{1}{\sqrt 2}|1>  $ is also a superposition state. Moreover, since the value of $\alpha$ and $\beta$ are the same, we can say that the state is in an equal superposition of $|0\rangle$ and $|1\rangle$. In classical computing, we are always manipulating zeros and ones to get what we want. You must wonder how we get from one state to another quantumly because, at the end of the day, we want to perform a computation quantumly! This is where gates come in and are the topic of discussion in the next section.
 ![Superposition](https://www.nist.gov/sites/default/files/images/2019/12/04/superposition.gif)
 
 
-## Code Example
-```{code-cell} ipython3
-import pennylane as qml
-from pennylane import numpy as np
-
-```
-
-Create a device. The number of wires represents the number of qubits in the system.
-
-
-```{code-cell} ipython3
-
-dev1 = qml.device("default.qubit", wires=1)
-
-```
 

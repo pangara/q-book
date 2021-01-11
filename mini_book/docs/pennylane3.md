@@ -21,7 +21,7 @@ We are finally ready to create and run the teleportation circuit using PennyLane
 
 ```{admonition} But wait!
 :class: warning
-A measurement has to be the last part in a quantum circuit in PennyLane, i.e., we cannot perform partial measurements. Fortunately, the [Principle of Deferred Measurement](https://en.wikipedia.org/wiki/Deferred_Measurement_Principle) comes to our rescue. This is a result in quantum computing which states that delaying measurements until the end if a quantum computation does not affect the probability distribution of the outcomes. Therefore, we can swap the last two steps without affecting our results. 
+Measurement has to be the last part in a quantum circuit in PennyLane, i.e., we cannot perform partial measurements. Fortunately, the [Principle of Deferred Measurement](https://en.wikipedia.org/wiki/Deferred_Measurement_Principle) comes to our rescue. This is a result of quantum computing which states that delaying measurements until the end of a quantum computation does not affect the probability distribution of the outcomes. Therefore, we can swap the last two steps without affecting our results. 
 ```
 
 

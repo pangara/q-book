@@ -18,11 +18,11 @@ A qubit as we know is a single unit of quantum computation, and is represented b
 :scale: 40%
 :name: multi-qubit-highlight 
 
-Part of the quantum teleportation diagram with the qubits, single qubit gates, two-qubit gates, and measurement highlighted.
+Part of the quantum teleportation diagram with the qubits, single-qubit gates, two-qubit gates, and measurement highlighted.
 ```
 
 ## Tensor Products
-Tensor products are different from regular  matrix multiplication, such that the resulting matrix has a higher dimension than the matrices we started out with. Tensor products work by multiplying every element of one matrix with every other element of the other matrix.
+Tensor products are different from regular matrix multiplication, such that the resulting matrix has a higher dimension than the matrices we started out with. Tensor products work by multiplying every element of one matrix with every other element of the other matrix.
 
 
 
@@ -32,7 +32,7 @@ Tensor products are different from regular  matrix multiplication, such that the
 
 ## Combining qubits
 
-Let's create a two qubit system. 
+Let's create a two-qubit system. 
 
 $$
 
@@ -42,7 +42,7 @@ $$
 ```{admonition} Exercise 1
 :class: tip
 
-Given that we have two single qubit quantum systems with the following states, lets combine them via a tensor product. 
+Given that we have two single qubit quantum systems with the following states, let us combine them via a tensor product. 
 
 $$
 
@@ -115,7 +115,7 @@ $$
 
 ```
 
-## States in a two qubit system
+## States in a two-qubit system
 When we have two quantum states in the same systems, the qubit can be in one to all of the following states $|00\rangle$, $|01\rangle$, $|10\rangle$, $|11\rangle$.
 
 
@@ -128,7 +128,7 @@ $$
 $$
 
 
- As the number of qubits increases, the number of states it can be in also increases. In general with an $n$-qubit system, you can have $2^n$ states. 
+ As the number of qubits increases, the number of states it can be in also increases. In general, with an $n$-qubit system, you can have $2^n$ states. 
 
 
 ## CNOT Gate
@@ -142,7 +142,7 @@ The CNOT gate
 ```
 
 
-Now that we know how to create a two-qubit system, we can work woth a two qubit gate. For this tutorial, we will go over the CNOT gate. 
+Now that we know how to create a two-qubit system, we can work with a two-qubit gate. For this tutorial, we will go over the CNOT gate. 
 The CNOT gate is given by the matrix:
 
 $$
@@ -154,7 +154,7 @@ U = \begin{pmatrix}
 \end{pmatrix}
 $$
 
-The CNOT gate flips the second qubit if the first qubit is 1, and leaves the second qubit as it id if the first qubit is 0. THe first qubit remains unchanged. 
+The CNOT gate flips the second qubit if the first qubit is 1, and leaves the second qubit as it id if the first qubit is 0. The first qubit remains unchanged. 
 Suppose we are given a state $|11\rangle$, applying the CNOT gate changes this state to $|10\rangle$. If we were given a superposition state:
 
 $$
