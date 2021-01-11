@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Quantum Teleportation &#8212; From Qubits to Quantum Teleportation</title>
+    <title>PennyLane II: Entanglement &#8212; From Qubits to Quantum Teleportation</title>
     
   <link rel="stylesheet" href="../_static/css/index.73d71520a4ca3b99cfee5594769eaaae.css">
 
@@ -56,8 +56,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="PennyLane III: Teleportation" href="pennylane3.html" />
-    <link rel="prev" title="PennyLane II: Entanglement" href="pennylane2.html" />
+    <link rel="next" title="Quantum Teleportation" href="teleportation.html" />
+    <link rel="prev" title="Entanglement" href="entanglement.html" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -128,13 +128,13 @@
    Entanglement
   </a>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="pennylane2.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    PennyLane II: Entanglement
   </a>
  </li>
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="teleportation.html">
    Quantum Teleportation
   </a>
  </li>
@@ -187,11 +187,11 @@
     <div class="dropdown-buttons">
         <!-- ipynb file if we had a myst markdown file -->
         <a class="dropdown-buttons"
-            href="../_sources/docs/teleportation.ipynb"><button type="button"
+            href="../_sources/docs/pennylane2.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/docs/teleportation.md"><button type="button"
+        <a class="dropdown-buttons" href="../_sources/docs/pennylane2.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.md</button></a>
         <!-- Download PDF via print -->
@@ -216,7 +216,7 @@
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/quantecon-mini-example/master?urlpath=tree/mini_book/docs/teleportation.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/quantecon-mini-example/master?urlpath=tree/mini_book/docs/pennylane2.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -239,31 +239,39 @@
         <nav id="bd-toc-nav">
             <ul class="nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#problem-statement">
-   Problem Statement
+  <a class="reference internal nav-link" href="#setup">
+   Setup
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#solution">
-   Solution
+  <a class="reference internal nav-link" href="#create-a-device-with-two-qubits">
+   Create a device with two qubits
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#a-step-by-step-explanation">
-   A step-by-step explanation
+  <a class="reference internal nav-link" href="#create-the-entanglement-circuit">
+   Create the entanglement circuit
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#prepare-the-bell-pair">
-     Prepare the Bell Pair
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Teleport
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#run-the-circuit">
+   Run the circuit
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#visualize-results">
+   Visualize Results
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-code">
+   More Code
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#further-reading">
+   Further reading
+  </a>
  </li>
 </ul>
 
@@ -276,82 +284,94 @@
         
               <div>
                 
-  <div class="section" id="quantum-teleportation">
-<span id="teleportation"></span><h1>Quantum Teleportation<a class="headerlink" href="#quantum-teleportation" title="Permalink to this headline">¶</a></h1>
-<p>We are now ready to understand how the teleportation circuit works. From our section on motivation, we understand that teleportation is a process of sending quantum information. Sounds simple enough, but we have a problem called the <strong>no-cloning theorem</strong>. The no-cloning theorem is a result of quantum mechanics which forbids the creation of identical copies of an arbitrary unknown quantum state.</p>
-<div class="section" id="problem-statement">
-<h2>Problem Statement<a class="headerlink" href="#problem-statement" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Alice has to send a qubit to Bob.</p></li>
-<li><p>Alice and Bob have a pre-shared Bell State</p></li>
-<li><p>Alice can send only classical information to Bob</p></li>
-<li><p>Alice doesn’t know the state of the qubit, even if she does, describing it would take infinite amount of classical information since qubits take value in a continuous space.</p></li>
-</ul>
-</div>
-<div class="section" id="solution">
-<h2>Solution<a class="headerlink" href="#solution" title="Permalink to this headline">¶</a></h2>
-<ul class="simple">
-<li><p>Alice interacts <span class="math notranslate nohighlight">\(|\psi\rangle\)</span> with her half of the Bell pair, and then makes a measurement (Bell basis measurement)</p></li>
-<li><p>She obtains one of four classical results 00, 01, 10 or 11 and sends this information to Bob</p></li>
-<li><p>Depending on Alice’s classical message, Bob performs one of four operations on his half of the EPR pair</p></li>
-<li><p>This recovers the state <span class="math notranslate nohighlight">\(|\psi\rangle\)</span>!</p></li>
-</ul>
-</div>
-<div class="section" id="a-step-by-step-explanation">
-<h2>A step-by-step explanation<a class="headerlink" href="#a-step-by-step-explanation" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-default" id="teleport">
-<a class="reference internal image-reference" href="../_images/teleport.png"><img alt="../_images/teleport.png" src="../_images/teleport.png" style="width: 787.6px; height: 393.6px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 19 </span><span class="caption-text">The quantum teleportation circuit</span><a class="headerlink" href="#teleport" title="Permalink to this image">¶</a></p>
-</div>
-<p>Given Alice’s qubit <span class="math notranslate nohighlight">\(|q_0\rangle\)</span>, we wish to transfer this state to Bob’s <span class="math notranslate nohighlight">\(|q_2\rangle\)</span>.</p>
-<div class="section" id="prepare-the-bell-pair">
-<h3>Prepare the Bell Pair<a class="headerlink" href="#prepare-the-bell-pair" title="Permalink to this headline">¶</a></h3>
-<p>First a third party, Eve, creates an entangled pair and gives one of the qubits in this pair to Alice and the other qubit in this entangled pair to Bob.
-Let’s refer back to our diagram from the section on entanglement.</p>
-<div class="figure align-default" id="entangle-t">
-<a class="reference internal image-reference" href="../_images/entangle-t.png"><img alt="../_images/entangle-t.png" src="../_images/entangle-t.png" style="width: 727.2px; height: 293.2px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 20 </span><span class="caption-text">Creation of a Bell Pair</span><a class="headerlink" href="#entangle-t" title="Permalink to this image">¶</a></p>
+  <div class="section" id="pennylane-ii-entanglement">
+<span id="pennylane2"></span><h1>PennyLane II: Entanglement<a class="headerlink" href="#pennylane-ii-entanglement" title="Permalink to this headline">¶</a></h1>
+<p>In this section we will create a quantum circuit that entangles two qubits.</p>
+<div class="section" id="setup">
+<h2>Setup<a class="headerlink" href="#setup" title="Permalink to this headline">¶</a></h2>
+<p>Let’s start with our usual setup by importing the necessary libraries</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pennylane</span> <span class="k">as</span> <span class="nn">qml</span>
+<span class="kn">from</span> <span class="nn">pennylane</span> <span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+</pre></div>
 </div>
 </div>
-<div class="section" id="id1">
-<h3>Teleport<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Now, we start with <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> in the state <span class="math notranslate nohighlight">\(|0\rangle\)</span>. <span class="math notranslate nohighlight">\(|q_1\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_2\rangle\)</span> represent the entangled pair</p>
-<div class="math notranslate nohighlight">
-\[|\psi_1\rangle = |0\rangle \frac{|00\rangle + |11\rangle}{\sqrt 2}\]</div>
-<p>Applying the CNOT gate between <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_1\rangle\)</span>, we observe no change since the source qubit is in the state <span class="math notranslate nohighlight">\(|0\rangle\)</span></p>
-<div class="math notranslate nohighlight">
-\[\begin{split}|\psi_1\rangle =  \frac{|000\rangle + |011\rangle}{\sqrt 2} \\
-CNOT(|\psi_1\rangle) = \frac{|000\rangle + |011\rangle}{\sqrt 2}\end{split}\]</div>
-<p>Now we apply the Hadamard gate to this state to get</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}H(CNOT(|\psi_1\rangle)) = H(\frac{|000\rangle + |011\rangle}{\sqrt 2}) \\
-|\psi_2\rangle = \frac{|000\rangle + |100\rangle}{2} +  \frac{|011\rangle + |111\rangle}{2}
-\end{split}\]</div>
-<p>At this point, we perform two measurements on <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_1\rangle\)</span>.</p>
-<div class="figure align-default" id="teleport-eq">
-<a class="reference internal image-reference" href="../_images/teleport-eq.png"><img alt="../_images/teleport-eq.png" src="../_images/teleport-eq.png" style="width: 462.9px; height: 92.39999999999999px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 21 </span><span class="caption-text"><span class="math notranslate nohighlight">\(|\psi_2\rangle\)</span> before measurement</span><a class="headerlink" href="#teleport-eq" title="Permalink to this image">¶</a></p>
-</div>
-<p>We can see from the figure and the equation that there are 4 possibilities for <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_1\rangle\)</span>.  From the circuit diagram we see that there there are two more gates after measurement, the Controlled-NOT and Controlled-Z gate, that are applied onto Bob’s <span class="math notranslate nohighlight">\(|q_2\rangle\)</span>. Note that <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_1\rangle\)</span> get destroyed upon measurement giving us two classical bits <span class="math notranslate nohighlight">\(c_1\)</span> and <span class="math notranslate nohighlight">\(c_2\)</span>.</p>
-<p>The controlled gates at the end are there to apply the corresponding (NOT/X and Z) gates only if either or both of <span class="math notranslate nohighlight">\(|q_0\rangle\)</span> and <span class="math notranslate nohighlight">\(|q_1\rangle\)</span> are 1 resulting in the following table. Note that X and NOT are used here interchangeably.</p>
-<div class="figure align-default" id="teleport-results">
-<a class="reference internal image-reference" href="_static/teleport-results.png"><img alt="_static/teleport-results.png" src="_static/teleport-results.png" /></a>
-<p class="caption"><span class="caption-number">Fig. 22 </span><span class="caption-text">When to apply the controlled-NOT and controlled-Z gates.</span><a class="headerlink" href="#teleport-results" title="Permalink to this image">¶</a></p>
-</div>
-<div class="tip admonition">
-<p class="admonition-title">Exercise: Practice with different states</p>
-<ol class="simple">
-<li><p>Start with the state <span class="math notranslate nohighlight">\(|q_0\rangle = |1\rangle\)</span> (Alice). What is the resulting $|q_2\rangle (Bob), after the circuit is run?</p></li>
-<li><p>Start with the state <span class="math notranslate nohighlight">\(|q_0\rangle = \frac{|0\rangle + |1\rangle}{\sqrt 2}\)</span>. What is the resulting $|q_2\rangle (Bob), after the circuit is run?</p></li>
-</ol>
-</div>
-<div class="tip admonition">
-<p class="admonition-title">Bonus Exercise</p>
-<ol class="simple">
-<li><p>Start with the state <span class="math notranslate nohighlight">\(|q_0\rangle = \alpha|0\rangle + \beta|1\rangle\)</span>. What is the resulting $|q_2\rangle (Bob), after the circuit is run?</p></li>
-</ol>
 </div>
 </div>
+<div class="section" id="create-a-device-with-two-qubits">
+<h2>Create a device with two qubits<a class="headerlink" href="#create-a-device-with-two-qubits" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dev</span> <span class="o">=</span> <span class="n">qml</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;default.qubit&quot;</span><span class="p">,</span> <span class="n">wires</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="create-the-entanglement-circuit">
+<h2>Create the entanglement circuit<a class="headerlink" href="#create-the-entanglement-circuit" title="Permalink to this headline">¶</a></h2>
+<p>The entanglement circuit involving applying the Hadamard gate to the first qubit followed by the CNOT gte with the second qubit as the target qubit.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@qml</span><span class="o">.</span><span class="n">qnode</span><span class="p">(</span><span class="n">dev</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">entanglement</span><span class="p">():</span>
+    <span class="c1"># Prepare q1</span>
+    <span class="n">qml</span><span class="o">.</span><span class="n">Hadamard</span><span class="p">(</span><span class="n">wires</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+    <span class="n">qml</span><span class="o">.</span><span class="n">CNOT</span><span class="p">(</span><span class="n">wires</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+    
+    <span class="k">return</span> <span class="n">qml</span><span class="o">.</span><span class="n">probs</span><span class="p">(</span><span class="n">wires</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="run-the-circuit">
+<h2>Run the circuit<a class="headerlink" href="#run-the-circuit" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">entanglement</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">array([0.5,</span> <span class="pre">0.</span> <span class="pre">,</span> <span class="pre">0.</span> <span class="pre">,</span> <span class="pre">0.5])</span></code></p>
+</div>
+<div class="section" id="visualize-results">
+<h2>Visualize Results<a class="headerlink" href="#visualize-results" title="Permalink to this headline">¶</a></h2>
+<p>Since we have two qubits it can be in one of four states.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">states</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;00&#39;</span><span class="p">,</span> <span class="s1">&#39;01&#39;</span><span class="p">,</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span> <span class="s1">&#39;11&#39;</span><span class="p">]</span>
+<span class="n">probs</span> <span class="o">=</span> <span class="n">entanglement</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">bar</span><span class="p">(</span><span class="n">states</span><span class="p">,</span> <span class="n">probs</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;State&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">18</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Probability&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">16</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="figure align-default" id="probs-2">
+<a class="reference internal image-reference" href="../_images/probs-2.PNG"><img alt="../_images/probs-2.PNG" src="../_images/probs-2.PNG" style="width: 400.0px; height: 264.0px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 18 </span><span class="caption-text">Results of <code class="docutils literal notranslate"><span class="pre">entanglement()</span></code> visualized using matplotlib</span><a class="headerlink" href="#probs-2" title="Permalink to this image">¶</a></p>
+</div>
+<p>The results show that the qubits cannot be in the state <span class="math notranslate nohighlight">\(|01\rangle\)</span>, <span class="math notranslate nohighlight">\(|10\rangle\)</span> and the probability of finding both qubits in state 00 is 0.5 and the probability of finding the qubits in 11 is 0.5 showing that we have indeed achieved an entangled state.</p>
+</div>
+<div class="section" id="more-code">
+<h2>More Code<a class="headerlink" href="#more-code" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-exercise-test-with-other-initial-states admonition">
+<p class="admonition-title">Exercise: Test with other initial states</p>
+<p>Try to create entanglement states with other starter states such as <span class="math notranslate nohighlight">\(|01\rangle\)</span>, <span class="math notranslate nohighlight">\(|10\rangle\)</span>, <span class="math notranslate nohighlight">\(|11\rangle\)</span>. Tip: You can flip the qubit by using the <code class="docutils literal notranslate"><span class="pre">qml.PauliX()</span></code> gate.</p>
+</div>
+</div>
+<div class="section" id="further-reading">
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://pennylane.readthedocs.io/en/stable/introduction/circuits.html">PennyLane documentation</a> provides more information about creating quantum nodes and circuits.</p>
 </div>
 </div>
 
@@ -383,8 +403,8 @@ CNOT(|\psi_1\rangle) = \frac{|000\rangle + |011\rangle}{\sqrt 2}\end{split}\]</d
     
     <div class='prev-next-bottom'>
         
-    <a class='left-prev' id="prev-link" href="pennylane2.html" title="previous page">PennyLane II: Entanglement</a>
-    <a class='right-next' id="next-link" href="pennylane3.html" title="next page">PennyLane III: Teleportation</a>
+    <a class='left-prev' id="prev-link" href="entanglement.html" title="previous page">Entanglement</a>
+    <a class='right-next' id="next-link" href="teleportation.html" title="next page">Quantum Teleportation</a>
 
     </div>
     <footer class="footer mt-5 mt-md-0">

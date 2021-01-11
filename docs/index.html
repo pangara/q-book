@@ -113,6 +113,11 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="pennylane1.html">
+   PennyLane I: Introduction
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="multi-qubit.html">
    Multiple Qubit Systems and Gates
   </a>
@@ -123,8 +128,18 @@
   </a>
  </li>
  <li class="toctree-l1">
+  <a class="reference internal" href="pennylane2.html">
+   PennyLane II: Entanglement
+  </a>
+ </li>
+ <li class="toctree-l1">
   <a class="reference internal" href="teleportation.html">
    Quantum Teleportation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="pennylane3.html">
+   PennyLane III: Teleportation
   </a>
  </li>
  <li class="toctree-l1">
@@ -211,6 +226,13 @@
   <a class="reference internal nav-link" href="#medium">
    Medium
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pennylane">
+     PennyLane
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#audience">
@@ -237,7 +259,7 @@
 <li><p>explains the quantum teleportation algorithm.</p></li>
 </ol>
 <p>I chose quantum teleportation, because it is one of the core primitives of quantum computing and keeps popping up in popular science articles.
-This tutorial has been built in the form of an interactive textbook and has been built using <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter Books</a>.</p>
+This tutorial has been built in the form of an interactive textbook using <a class="reference external" href="https://jupyterbook.org/intro.html">Jupyter Books</a>.</p>
 <div class="section" id="learning-outcomes">
 <h2>Learning Outcomes<a class="headerlink" href="#learning-outcomes" title="Permalink to this headline">¶</a></h2>
 <p>By the end of this tutorial, the reader will:</p>
@@ -248,6 +270,7 @@ This tutorial has been built in the form of an interactive textbook and has been
 <li><p>learn to write short quantum programs using Pennylane</p></li>
 <li><p>understand quantum teleportation mathematically</p></li>
 <li><p>learn how to build the quantum teleportation circuit</p></li>
+<li><p>implement the quantum teleportation circuit on Pennylane</p></li>
 </ul>
 </div>
 <div class="section" id="medium">
@@ -258,8 +281,17 @@ This tutorial has been built in the form of an interactive textbook and has been
 <li><p>They allow addition of LaTeX-style math using MathJax, and bibtex files for references</p></li>
 <li><p>They are open source (as a part of the <a class="reference external" href="https://executablebooks.org/en/latest/">Executable Book Project</a>)</p></li>
 <li><p>They have a command line interface to quickly build textbooks</p></li>
-<li><p>They are easy to deploy with github pages/actions</p></li>
+<li><p>They are easy to deploy with Github Pages/Actions</p></li>
 </ol>
+<div class="section" id="pennylane">
+<h3>PennyLane<a class="headerlink" href="#pennylane" title="Permalink to this headline">¶</a></h3>
+<p>While Pennylane is certainly suitable mostly for Quantum Machine Learning, I have chosen it as the library of choice for implementing the quantum teleportation algorithm, because</p>
+<ol class="simple">
+<li><p>it is possible to do so,</p></li>
+<li><p>there are not many resources online on the basic algorithms of quantum computing using Pennylane,  and</p></li>
+<li><p>it allows the reader to get a Hello World into PennyLane.</p></li>
+</ol>
+</div>
 </div>
 <div class="section" id="audience">
 <h2>Audience<a class="headerlink" href="#audience" title="Permalink to this headline">¶</a></h2>

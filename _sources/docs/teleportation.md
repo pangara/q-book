@@ -35,7 +35,10 @@ We are now ready to understand how the teleportation circuit works. From our sec
 
 The quantum teleportation circuit
 ```
-Given Alice's qubit $|q_0\rangle$, we wish to transfer this state to Bob's $|q_2\rangle$. First a third party, Eve, creates an entangled pair and gives one of the qubits in this pair to Alice and the other qubit in this entangled pair to Bob. 
+Given Alice's qubit $|q_0\rangle$, we wish to transfer this state to Bob's $|q_2\rangle$. 
+
+### Prepare the Bell Pair
+First a third party, Eve, creates an entangled pair and gives one of the qubits in this pair to Alice and the other qubit in this entangled pair to Bob. 
 Let's refer back to our diagram from the section on entanglement.
 ```{figure} /_static/entangle-t.png
 :scale: 40%
@@ -45,7 +48,8 @@ Creation of a Bell Pair
 
 ```
 
-Now, we start with $|q_0\rangle$ in the state $|0\rangle$. 
+### Teleport
+Now, we start with $|q_0\rangle$ in the state $|0\rangle$. $|q_1\rangle$ and $|q_2\rangle$ represent the entangled pair 
 
 $$
 
@@ -87,4 +91,24 @@ The controlled gates at the end are there to apply the corresponding (NOT/X and 
 :scale: 50%
 :name: teleport-results
 
-When to apply the controlled-NOT and controlled-Z gates
+When to apply the controlled-NOT and controlled-Z gates.
+```
+
+
+
+
+
+```{admonition} Exercise: Practice with different states
+:class: tip
+
+1. Start with the state $|q_0\rangle = |1\rangle$ (Alice). What is the resulting $|q_2\rangle (Bob), after the circuit is run?
+1. Start with the state $|q_0\rangle = \frac{|0\rangle + |1\rangle}{\sqrt 2}$. What is the resulting $|q_2\rangle (Bob), after the circuit is run?
+
+```
+
+```{admonition} Bonus Exercise
+:class: tip
+
+1. Start with the state $|q_0\rangle = \alpha|0\rangle + \beta|1\rangle$. What is the resulting $|q_2\rangle (Bob), after the circuit is run?
+
+```
